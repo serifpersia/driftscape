@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://sl7ad2phj483"]
+
+[ext_resource type="Texture2D" uid="uid://bs384vyhn0shh" path="res://textures/rect_collObj.png" id="1_oqtdt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ctnka"]
+size = Vector2(128, 128)
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+scale = Vector2(1, 2)
+collision_layer = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_oqtdt")
+offset = Vector2(0, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 64)
+shape = SubResource("RectangleShape2D_ctnka")

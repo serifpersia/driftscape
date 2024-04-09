@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgcrc3udft2ni"]
+
+[ext_resource type="Script" path="res://scripts/Discord_Rich_Presence.gd" id="1_hnyw0"]
+
+[node name="Discord_Rich_Presence" type="Node"]
+script = ExtResource("1_hnyw0")

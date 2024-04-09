@@ -1,0 +1,15 @@
+Timer
+Label
+Control
+GPUParticles2D
+AnimationPlayer
+AnimatableBody2D
+Node2D
+Area2D
+Node
+CollisionShape2D
+StaticBody2D
+CanvasLayer
+TileMap
+Sprite2D
+ColorRect

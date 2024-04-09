@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://byhk5t6w6gw51"]
+
+[ext_resource type="Texture2D" uid="uid://de6vs07lfe30k" path="res://textures/player_texture.png" id="1_717su"]
+[ext_resource type="Script" path="res://scripts/custom cursor.gd" id="2_rm0fu"]
+
+[node name="custom cursor" type="Sprite2D"]
+modulate = Color(1, 0.152941, 0.0705882, 1)
+scale = Vector2(0.0343906, 0.0343906)
+texture = ExtResource("1_717su")
+script = ExtResource("2_rm0fu")
