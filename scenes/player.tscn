@@ -15,6 +15,7 @@ radius = 52.4057
 
 [sub_resource type="SystemFont" id="SystemFont_f3nvp"]
 font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0g4sr"]
 radius = 49.1005
