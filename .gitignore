@@ -13,3 +13,8 @@ data_*/
 *.md5
 *.cache
 *.tmp
+/addons
+/.godot
+/.godot/editor
+.godot/editor/filesystem_cache8
+/.godot
