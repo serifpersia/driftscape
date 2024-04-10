@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpqm5u5dktr65"]
+
+[ext_resource type="Texture2D" uid="uid://dwv1qsrovy73f" path="res://textures/wall_tile.png" id="1_ifu55"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_raj5f"]
+size = Vector2(128, 64)
+
+[sub_resource type="Animation" id="Animation_f2axb"]
+resource_name = "moving platform1"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Platform:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-200, 0), Vector2(248, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5e6n2"]
+_data = {
+"moving platform1": SubResource("Animation_f2axb")
+}
+
+[node name="MovingPlatform" type="Node2D"]
+
+[node name="Platform" type="AnimatableBody2D" parent="."]
+position = Vector2(-200, 0)
+
+[node name="tex1" type="Sprite2D" parent="Platform"]
+position = Vector2(-32, 0)
+texture = ExtResource("1_ifu55")
+
+[node name="tex2" type="Sprite2D" parent="Platform"]
+position = Vector2(32, 0)
+texture = ExtResource("1_ifu55")
+
+[node name="collision" type="CollisionShape2D" parent="Platform"]
+shape = SubResource("RectangleShape2D_raj5f")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5e6n2")
+}
+autoplay = "moving platform1"

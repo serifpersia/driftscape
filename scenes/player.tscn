@@ -46,9 +46,9 @@ shape = SubResource("CircleShape2D_ce31e")
 
 [node name="HealthBar" parent="CanvasLayer" instance=ExtResource("3_0mpwd")]
 offset_left = 20.0
-offset_top = 21.0
+offset_top = 20.0
 offset_right = 320.0
-offset_bottom = 56.0
+offset_bottom = 55.0
 
 [node name="TimeCounter" type="Label" parent="CanvasLayer"]
 offset_left = 20.0
@@ -57,6 +57,19 @@ offset_right = 60.0
 offset_bottom = 119.0
 theme_override_fonts/font = SubResource("SystemFont_f3nvp")
 theme_override_font_sizes/font_size = 50
+
+[node name="DamageTaken" type="Label" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -82.0
+offset_right = 60.0
+offset_bottom = -20.0
+grow_vertical = 0
+theme_override_fonts/font = SubResource("SystemFont_f3nvp")
+theme_override_font_sizes/font_size = 50
+text = "Damage Taken: "
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("5_2dexs")]
 visible = false

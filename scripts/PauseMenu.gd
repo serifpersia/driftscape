@@ -1,7 +1,15 @@
 extends Control
 
+@onready var player = $"../.."
+
+var gameEnded
+
 func _ready():
 	hide()
+	player.connect("gameEndedSignal", enableGameEnd)
+
+func enableGameEnd():
+	gameEnded = true
 
 func resume():
 	get_tree().paused = false
@@ -13,12 +21,15 @@ func pause():
 	show()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
-func testEsc():
-	if Input.is_action_just_pressed("pause") and !get_tree().paused:
-		pause()
-	elif Input.is_action_just_pressed("pause") and get_tree().paused:
-		resume()
-
+func togglePause():
+	if Input.is_action_just_pressed("pause"):
+		if gameEnded:
+			return  # Don't toggle pause if the game has ended (finished or failed)
+		
+		if get_tree().paused:
+			resume()
+		else:
+			pause()
 
 func _on_resume_pressed():
 	resume()
@@ -28,7 +39,7 @@ func _on_retry_pressed():
 	get_tree().reload_current_scene()
 
 func _process(_delta):
-	testEsc()
+	togglePause()
 
 
 func _on_main_menu_pressed():

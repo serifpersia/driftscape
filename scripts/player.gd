@@ -8,12 +8,16 @@ var Max_health: float = 100
 @onready var score_label = $CanvasLayer/FinishLevelScene/MarginContainer/HBoxContainer/VBoxContainer/Score
 @onready var time_label = $CanvasLayer/FinishLevelScene/MarginContainer/HBoxContainer/VBoxContainer/Time
 @onready var time_counter = $CanvasLayer/TimeCounter
+@onready var damage_taken = $CanvasLayer/DamageTaken
+
 var health: float = 100
 enum Rank { D = 70, C = 80, B = 85, A = 90, S = 95, SS = 100 }
 var currentRank: Rank = Rank.SS
 var timeElapsed: float = 0
 var time: int = 0
-var totalDamageTaken: int = 0  # New variable to track total damage taken
+var totalDamageTaken: int = 0
+
+signal gameEndedSignal
 
 func _ready():
 	health = Max_health
@@ -50,7 +54,7 @@ func _input(event):
 func decrease_health(amount: int):
 	health -= amount
 	health = max(health, 0)
-	totalDamageTaken += amount  # Increment total damage taken
+	totalDamageTaken += amount
 	if healthBar != null:
 		healthBar._set_health(health)
 	if health == 0:
@@ -73,6 +77,7 @@ func updateRank():
 		currentRank = newRank
 	var score = get_rank_string(currentRank)
 	score_label.text = "Damage Score: " + score + "\n" + str(totalDamageTaken) + " points of damage taken"
+	damage_taken.text = "Damage Taken: " + str(totalDamageTaken)
 
 func get_rank_string(rank: Rank) -> String:
 	match rank:
@@ -89,11 +94,13 @@ func _die():
 	level_failed()
 
 func level_failed():
+	emit_signal("gameEndedSignal")
 	get_tree().paused = true
 	fail_level_scene.show()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func level_finish():
+	emit_signal("gameEndedSignal")
 	get_tree().paused = true
 	finish_level_scene.show()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
