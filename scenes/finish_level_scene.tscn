@@ -73,4 +73,18 @@ theme_override_fonts/font = SubResource("SystemFont_mk2x5")
 theme_override_font_sizes/font_size = 24
 text = "Retry"
 
+[node name="LevelSelect" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_mk2x5")
+theme_override_font_sizes/font_size = 24
+text = "Level Select"
+
+[node name="MainMenu" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_mk2x5")
+theme_override_font_sizes/font_size = 24
+text = "Main Menu"
+
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/LevelSelect" to="." method="_on_level_select_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/MainMenu" to="." method="_on_main_menu_pressed"]

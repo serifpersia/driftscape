@@ -1,9 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://df1t1p46ihbo"]
+[gd_scene load_steps=7 format=3 uid="uid://df1t1p46ihbo"]
 
 [ext_resource type="Script" path="res://scripts/regen_area.gd" id="1_t2v4s"]
 [ext_resource type="Texture2D" uid="uid://bcg54eoj4nqho" path="res://textures/hp regen_sprite.png" id="2_aop4k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pikij"]
+
+[sub_resource type="Gradient" id="Gradient_bcrqe"]
+offsets = PackedFloat32Array(0, 0.605327, 0.711864)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_vdojj"]
+gradient = SubResource("Gradient_bcrqe")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_uivps"]
 particle_flag_disable_z = true
@@ -13,6 +20,7 @@ direction = Vector3(0, 0, 0)
 gravity = Vector3(0, 0, 0)
 radial_accel_min = 30.0
 radial_accel_max = 30.0
+color_ramp = SubResource("GradientTexture1D_vdojj")
 
 [node name="regen_area" type="Node2D"]
 script = ExtResource("1_t2v4s")
