@@ -1,3 +1,6 @@
+Button
+Label
+GridContainer
 WorldEnvironment
 GPUParticles2D
 Line2D
@@ -9,6 +12,3 @@ AnimatableBody2D
 Node2D
 Node
 RemoteTransform2D
-Timer
-Label
-Control

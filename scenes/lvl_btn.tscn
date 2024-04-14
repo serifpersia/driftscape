@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://g14d8pu5bqo0"]
+
+[ext_resource type="Script" path="res://scripts/lvl_btn.gd" id="1_wtlso"]
+
+[sub_resource type="SystemFont" id="SystemFont_6t6ul"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="SystemFont" id="SystemFont_o3d5p"]
+font_names = PackedStringArray("Impact")
+
+[node name="LvlBtn" type="Button"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.611765, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_6t6ul")
+theme_override_font_sizes/font_size = 50
+text = "Level"
+script = ExtResource("1_wtlso")
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 56.0
+offset_right = 96.0
+offset_bottom = 87.0
+theme_override_fonts/font = SubResource("SystemFont_o3d5p")
+theme_override_font_sizes/font_size = 24
+text = "Score: "
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

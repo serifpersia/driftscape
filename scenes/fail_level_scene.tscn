@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b42owupk1jg6p"]
 
-[ext_resource type="Script" path="res://scripts/finish_level_scene.gd" id="1_1xwlp"]
+[ext_resource type="Script" path="res://scripts/finishfail_scene.gd" id="1_6qdso"]
 
 [sub_resource type="SystemFont" id="SystemFont_mk2x5"]
 font_names = PackedStringArray("Impact")
@@ -13,7 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_1xwlp")
+script = ExtResource("1_6qdso")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

@@ -17,6 +17,9 @@ var timeElapsed: float = 0
 var time: int = 0
 var totalDamageTaken: int = 0
 
+var saved_data: SaveData
+
+var score : String
 signal gameEndedSignal
 
 func _ready():
@@ -24,6 +27,7 @@ func _ready():
 	healthBar.init_health(health)
 	updateRank()
 	time_counter.text = "Time: "
+	saved_data = SaveData.load_or_create()
 
 func _physics_process(delta):
 	var healthRatio: float = health / Max_health
@@ -75,7 +79,7 @@ func updateRank():
 			newRank = rank
 	if newRank < currentRank:
 		currentRank = newRank
-	var score = get_rank_string(currentRank)
+	score = get_rank_string(currentRank)
 	score_label.text = "Damage Score: " + score + "\n" + str(totalDamageTaken) + " points of damage taken"
 	damage_taken.text = "Damage Taken: " + str(totalDamageTaken)
 
@@ -104,6 +108,13 @@ func level_finish():
 	get_tree().paused = true
 	finish_level_scene.show()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	
+	 # Get the current scene's name as the level name
+	var current_scene = get_tree().get_current_scene()
+	var level_name = current_scene.get_name()
+	
+	# Call SaveData's function to save the score for the current level
+	saved_data.save_score_for_level(level_name, score)
 
 func _on_area_2d_body_entered(_body):
 	decrease_health(1)
