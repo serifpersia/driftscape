@@ -16,7 +16,7 @@ var currentRank: Rank = Rank.SS
 var timeElapsed: float = 0
 var time: int = 0
 var totalDamageTaken: int = 0
-
+var timeString : String
 var saved_data: SaveData
 
 var score : String
@@ -43,9 +43,9 @@ func updateTimeLabel():
 	var totalSeconds: int = time + int(timeElapsed)
 	var minutes: int = int(float(totalSeconds) / 60)
 	var seconds: int = totalSeconds % 60
-	var timeString: String = "Time: " + str(minutes).pad_zeros(2) + ":" + str(seconds).pad_zeros(2)
-	time_counter.text = timeString
-	time_label.text = timeString
+	timeString = str(minutes).pad_zeros(2) + ":" + str(seconds).pad_zeros(2)
+	time_counter.text = 'Time: ' + timeString
+	time_label.text = 'Time: ' + timeString
 
 func _input(event):
 	if event is InputEventMouseButton:
@@ -114,7 +114,7 @@ func level_finish():
 	var level_name = current_scene.get_name()
 	
 	# Call SaveData's function to save the score for the current level
-	saved_data.save_score_for_level(level_name, score)
+	saved_data.save_score_for_level(level_name, score, timeString)
 
 func _on_area_2d_body_entered(_body):
 	decrease_health(1)

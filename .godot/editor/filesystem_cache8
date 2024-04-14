@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713097266
+::res://::1713100530
 ::res://addons/::1712494862
 ::res://addons/discord-rpc-gd/::1712402123
 Debug.svg::CompressedTexture2D::1414570589633831756::1712402122::1712402122::1::::<><>::
@@ -14,7 +14,7 @@ restart_window.tscn::PackedScene::4076847685139362056::1712402122::0::1::::<><>:
 discord-rpc-gd.gdextension::GDExtension::-1::1712402122::0::1::::<><>::
 ::res://addons/discord-rpc-gd/bin/linux/::1712402122
 ::res://addons/discord-rpc-gd/bin/macos/::1712402122
-::res://addons/discord-rpc-gd/bin/windows/::1713097263
+::res://addons/discord-rpc-gd/bin/windows/::1713098635
 ::res://addons/discord-rpc-gd/nodes/::1712402123
 debug.gd::GDScript::-1::1712402123::0::1::::<>Node<>::
 Debug.tscn::PackedScene::6635590667203094151::1712402123::0::1::::<><>::uid://dnfq6kug4x6o2::::res://addons/discord-rpc-gd/nodes/assets/Checked.svg<>uid://compmm3kviqqe::::res://addons/discord-rpc-gd/nodes/assets/Unchecked.svg<>uid://dtc6ckladq0td::::res://addons/discord-rpc-gd/nodes/assets/circle.svg
@@ -23,7 +23,7 @@ discord_autoload.gd::GDScript::-1::1712402123::0::1::::<>Node<>::
 Checked.svg::CompressedTexture2D::8083066295081234619::1712402123::1712402123::1::::<><>::
 circle.svg::CompressedTexture2D::8498865176304625629::1712402123::1712402123::1::::<><>::
 Unchecked.svg::CompressedTexture2D::5781190569803204660::1712402123::1712402123::1::::<><>::
-::res://scenes/::1713097227
+::res://scenes/::1713100186
 animated_obsticale.tscn::PackedScene::4398990557186052718::1712831144::0::1::::<><>::uid://dt7pd6b2iqgl4::::res://scenes/spike.tscn
 custom cursor.tscn::PackedScene::4086065365902965902::1712831144::0::1::::<><>::uid://de6vs07lfe30k::::res://textures/player_texture.png<>res://scripts/custom cursor.gd
 discord_rich_presence.tscn::PackedScene::7585561130574115446::1712517580::0::1::::<><>::res://scripts/Discord_Rich_Presence.gd
@@ -33,9 +33,9 @@ finish_area.tscn::PackedScene::4065189652894641092::1713089372::0::1::::<><>::re
 finish_level_scene.tscn::PackedScene::2351536468185218248::1713089372::0::1::::<><>::res://scripts/finishfail_scene.gd
 healthBar.tscn::PackedScene::4231293660789854976::1712489539::0::1::::<><>::res://scripts/HealthBar.gd
 laser.tscn::PackedScene::5496090958925592245::1712831144::0::1::::<><>::res://scripts/laser.gd
-level_selector_menu.tscn::PackedScene::8234899716977976017::1713097227::0::1::::<><>::res://scripts/level_select_menu.gd
-lvl_btn.tscn::PackedScene::476574790997168477::1713097227::0::1::::<><>::res://scripts/lvl_btn.gd
-menu.tscn::PackedScene::107420556175714119::1713084747::0::1::::<><>::res://scripts/Menu.gd
+level_selector_menu.tscn::PackedScene::8234899716977976017::1713100185::0::1::::<><>::res://scripts/level_select_menu.gd
+lvl_btn.tscn::PackedScene::476574790997168477::1713100186::0::1::::<><>::res://scripts/lvl_btn.gd
+menu.tscn::PackedScene::107420556175714119::1713097947::0::1::::<><>::res://scripts/Menu.gd
 moving_platform.tscn::PackedScene::5859487340713561240::1712757280::0::1::::<><>::uid://dwv1qsrovy73f::::res://textures/wall_tile.png
 pause_menu.tscn::PackedScene::2775113686280800993::1712757280::0::1::::<><>::res://scripts/PauseMenu.gd
 player.tscn::PackedScene::6040612542083791674::1713096889::0::1::::<><>::uid://de6vs07lfe30k::::res://textures/player_texture.png<>res://scripts/player.gd<>res://scripts/Camera2D.gd<>uid://b1jw12natrmvo::::res://scenes/healthBar.tscn<>uid://bqev6quu0buwh::::res://scenes/trail_2d.tscn<>uid://bfsjym2svavnd::::res://scenes/pause_menu.tscn<>uid://8rdpyfdcv1su::::res://scenes/finish_level_scene.tscn<>res://scripts/Object_trail.gd<>uid://b42owupk1jg6p::::res://scenes/fail_level_scene.tscn
@@ -45,15 +45,13 @@ single_spike_loop.tscn::PackedScene::7086418383411992407::1712831144::0::1::::<>
 single_spike_loop_faster.tscn::PackedScene::4494791363198450705::1712831144::0::1::::<><>::uid://dt7pd6b2iqgl4::::res://scenes/spike.tscn
 spike.tscn::PackedScene::8559827911611785163::1712509554::0::1::::<><>::uid://dlr1ag332ctd1::::res://textures/spike.png
 testColObj.tscn::PackedScene::5833144644615590451::1713023994::0::1::::<><>::uid://6f2pmjgnfcaq::::res://textures/wall_oppening.png
-tilesetsquare.tres::TileSet::3114442920754259024::1713084826::0::1::::<><>::uid://dwv1qsrovy73f::::res://textures/wall_tile.png
+tilesetsquare.tres::TileSet::3114442920754259024::1713098638::0::1::::<><>::uid://dwv1qsrovy73f::::res://textures/wall_tile.png
 trail_2d.tscn::PackedScene::3519030981588876507::1712489539::0::1::::<><>::res://scripts/Trail2D.gd
-::res://scenes/levels/::1713097233
-level1.tscn::PackedScene::1983426040843316953::1713097233::0::1::::<><>::uid://bkmwojm6pgcno::::res://scenes/tilesetsquare.tres<>uid://df1t1p46ihbo::::res://scenes/regen_area.tscn<>uid://bx6hcycvhgr7a::::res://scenes/finish_area.tscn<>uid://b3w5y460abcdy::::res://scenes/animated_obsticale.tscn<>uid://cx8teca4vuujb::::res://scenes/Segment01.tscn<>uid://ckkl2yi4ttby0::::res://scenes/laser.tscn<>uid://cpqm5u5dktr65::::res://scenes/moving_platform.tscn<>uid://c77yjmn0gs2p4::::res://scenes/single_spike_loop.tscn<>uid://b5bks67qf3sa0::::res://scenes/single_spike_loop_faster.tscn<>uid://csceag70sbadm::::res://scenes/player.tscn<>uid://byhk5t6w6gw51::::res://scenes/custom cursor.tscn
-level2.tscn::PackedScene::6562149873933063359::1713088333::0::1::::<><>::uid://bkmwojm6pgcno::::res://scenes/tilesetsquare.tres<>uid://df1t1p46ihbo::::res://scenes/regen_area.tscn<>uid://bx6hcycvhgr7a::::res://scenes/finish_area.tscn<>uid://b3w5y460abcdy::::res://scenes/animated_obsticale.tscn<>uid://cx8teca4vuujb::::res://scenes/Segment01.tscn<>uid://ckkl2yi4ttby0::::res://scenes/laser.tscn<>uid://cpqm5u5dktr65::::res://scenes/moving_platform.tscn<>uid://c77yjmn0gs2p4::::res://scenes/single_spike_loop.tscn<>uid://b5bks67qf3sa0::::res://scenes/single_spike_loop_faster.tscn<>uid://csceag70sbadm::::res://scenes/player.tscn<>uid://byhk5t6w6gw51::::res://scenes/custom cursor.tscn
-level3.tscn::PackedScene::3825003446340070624::1713096954::0::1::::<><>::uid://bkmwojm6pgcno::::res://scenes/tilesetsquare.tres<>uid://df1t1p46ihbo::::res://scenes/regen_area.tscn<>uid://bx6hcycvhgr7a::::res://scenes/finish_area.tscn<>uid://b3w5y460abcdy::::res://scenes/animated_obsticale.tscn<>uid://cx8teca4vuujb::::res://scenes/Segment01.tscn<>uid://ckkl2yi4ttby0::::res://scenes/laser.tscn<>uid://cpqm5u5dktr65::::res://scenes/moving_platform.tscn<>uid://c77yjmn0gs2p4::::res://scenes/single_spike_loop.tscn<>uid://b5bks67qf3sa0::::res://scenes/single_spike_loop_faster.tscn<>uid://csceag70sbadm::::res://scenes/player.tscn<>uid://byhk5t6w6gw51::::res://scenes/custom cursor.tscn
-level4.tscn::PackedScene::710313848521460599::1713096955::0::1::::<><>::uid://bkmwojm6pgcno::::res://scenes/tilesetsquare.tres<>uid://df1t1p46ihbo::::res://scenes/regen_area.tscn<>uid://bx6hcycvhgr7a::::res://scenes/finish_area.tscn<>uid://b3w5y460abcdy::::res://scenes/animated_obsticale.tscn<>uid://cx8teca4vuujb::::res://scenes/Segment01.tscn<>uid://ckkl2yi4ttby0::::res://scenes/laser.tscn<>uid://cpqm5u5dktr65::::res://scenes/moving_platform.tscn<>uid://c77yjmn0gs2p4::::res://scenes/single_spike_loop.tscn<>uid://b5bks67qf3sa0::::res://scenes/single_spike_loop_faster.tscn<>uid://csceag70sbadm::::res://scenes/player.tscn<>uid://byhk5t6w6gw51::::res://scenes/custom cursor.tscn
-level5.tscn::PackedScene::3871390897840251263::1713096955::0::1::::<><>::uid://bkmwojm6pgcno::::res://scenes/tilesetsquare.tres<>uid://df1t1p46ihbo::::res://scenes/regen_area.tscn<>uid://bx6hcycvhgr7a::::res://scenes/finish_area.tscn<>uid://b3w5y460abcdy::::res://scenes/animated_obsticale.tscn<>uid://cx8teca4vuujb::::res://scenes/Segment01.tscn<>uid://ckkl2yi4ttby0::::res://scenes/laser.tscn<>uid://cpqm5u5dktr65::::res://scenes/moving_platform.tscn<>uid://c77yjmn0gs2p4::::res://scenes/single_spike_loop.tscn<>uid://b5bks67qf3sa0::::res://scenes/single_spike_loop_faster.tscn<>uid://csceag70sbadm::::res://scenes/player.tscn<>uid://byhk5t6w6gw51::::res://scenes/custom cursor.tscn
-::res://scripts/::1713097252
+::res://scenes/levels/::1713100530
+level1.tscn::PackedScene::1983426040843316953::1713100519::0::1::::<><>::uid://bkmwojm6pgcno::::res://scenes/tilesetsquare.tres<>uid://df1t1p46ihbo::::res://scenes/regen_area.tscn<>uid://bx6hcycvhgr7a::::res://scenes/finish_area.tscn<>uid://b3w5y460abcdy::::res://scenes/animated_obsticale.tscn<>uid://cx8teca4vuujb::::res://scenes/Segment01.tscn<>uid://ckkl2yi4ttby0::::res://scenes/laser.tscn<>uid://cpqm5u5dktr65::::res://scenes/moving_platform.tscn<>uid://c77yjmn0gs2p4::::res://scenes/single_spike_loop.tscn<>uid://b5bks67qf3sa0::::res://scenes/single_spike_loop_faster.tscn<>uid://csceag70sbadm::::res://scenes/player.tscn<>uid://byhk5t6w6gw51::::res://scenes/custom cursor.tscn
+level2.tscn::PackedScene::6504875932070339298::1713100519::0::1::::<><>::uid://3i10cdnk6wh2::::res://scenes/levels/level1.tscn
+level_3.tscn::PackedScene::2855976162462116053::1713100519::0::1::::<><>::uid://3i10cdnk6wh2::::res://scenes/levels/level1.tscn
+::res://scripts/::1713099898
 Camera2D.gd::GDScript::-1::1712412238::0::1::::<>Camera2D<>::
 custom cursor.gd::GDScript::-1::1712757275::0::1::::<>Node2D<>::
 Discord_Rich_Presence.gd::GDScript::-1::1712403417::0::1::::<>Node<>::
@@ -61,14 +59,14 @@ finishfail_scene.gd::GDScript::-1::1713084715::0::1::::<>Control<>::
 finish_area.gd::GDScript::-1::1712736983::0::1::::<>Node2D<>::
 HealthBar.gd::GDScript::-1::1712399269::0::1::::<>ProgressBar<>::
 laser.gd::GDScript::-1::1712752747::0::1::::<>Node2D<>::
-level_select_menu.gd::GDScript::-1::1713097152::0::1::::<>Control<>::
-lvl_btn.gd::GDScript::-1::1713097252::0::1::::<>Button<>::
+level_select_menu.gd::GDScript::-1::1713099691::0::1::::<>Control<>::
+lvl_btn.gd::GDScript::-1::1713097655::0::1::::<>Button<>::
 Menu.gd::GDScript::-1::1713084720::0::1::::<>Control<>::
 Object_trail.gd::GDScript::-1::1712331127::0::1::::<>Trails<>::
 PauseMenu.gd::GDScript::-1::1712739955::0::1::::<>Control<>::
-player.gd::GDScript::-1::1713094923::0::1::::Player<>CharacterBody2D<>::
+player.gd::GDScript::-1::1713099898::0::1::::Player<>CharacterBody2D<>::
 regen_area.gd::GDScript::-1::1712581707::0::1::::<>Node2D<>::
-savedata.gd::GDScript::-1::1713097075::0::1::::SaveData<>Resource<>::
+savedata.gd::GDScript::-1::1713098730::0::1::::SaveData<>Resource<>::
 testColObj.gd::GDScript::-1::1712339578::0::1::::<>AnimatableBody2D<>::
 Trail2D.gd::GDScript::-1::1712330923::0::1::::Trails<>Line2D<>::
 ::res://textures/::1712830207

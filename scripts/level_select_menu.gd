@@ -32,7 +32,9 @@ func create_level_btn(lvl_path: String, lvl_name: String):
 	# Access the existing score label in the button scene
 	var score_label = btn.get_node("Score")
 	if score_label != null:
-		score_label.text = 'Score: ' + saved_data.get_level_score(modified_btn_text)
+		var score = saved_data.get_level_score(modified_btn_text)
+		var time =  saved_data.get_level_time(modified_btn_text)
+		score_label.text = 'Score: ' + score + '\n' + 'Time: ' + time
 	else:
 		print("Score label not found in button scene.")
 

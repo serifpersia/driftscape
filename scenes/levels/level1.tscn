@@ -27,10 +27,6 @@ scale = Vector2(16, 16)
 position = Vector2(13470, -32)
 scale = Vector2(16, 16)
 
-[node name="finish_area2" parent="." instance=ExtResource("3_ltl8y")]
-position = Vector2(288, 96)
-scale = Vector2(16, 16)
-
 [node name="animatedObsticale" parent="." instance=ExtResource("4_ftrll")]
 position = Vector2(1664, 128)
 
