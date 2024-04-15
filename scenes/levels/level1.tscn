@@ -47,6 +47,6 @@ position = Vector2(3968, 384)
 rotation = 3.14159
 
 [node name="player" parent="." instance=ExtResource("10_0v6lo")]
-position = Vector2(100, 448)
+position = Vector2(128, 360)
 
 [node name="custom cursor" parent="." instance=ExtResource("11_r4gmn")]

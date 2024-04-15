@@ -1,23 +1,23 @@
 extends Camera2D
 
-var baseZoom: Vector2 = Vector2(1.5, 1.5)  # The base zoom level of the camera (X, Y)
-var minZoom: Vector2 = Vector2(0.2, 0.2)  # The minimum zoom level (maximum zoomed out) (X, Y)
-var zoomSpeed: float = 0.12 # The speed at which the camera zooms in/out based on velocity
-var sensitivity: float = 0.25 # Adjust the sensitivity of the zoom to velocity changes
+var baseZoom: Vector2 = Vector2(1.35, 1.35)
+var minZoom: Vector2 = Vector2(0.25, 0.25)
+var zoomSpeed: float = 0.1
+var sensitivity: float = 0.25
+
+@onready var start_time = $"../StartTime"
+
+func _ready():
+	zoom = Vector2(0.75, 0.75)
 
 func _process(_delta):
-	# Get the velocity from the parent node (assuming parent is the player character)
-	var playerVelocity: Vector2 = get_parent().velocity
+	if start_time.goDisplayed:
+		var playerVelocity: Vector2 = get_parent().velocity
 	
-	# Calculate the current velocity magnitude
-	var velocityMagnitude: float = playerVelocity.length()
+		var velocityMagnitude: float = playerVelocity.length()
+		var scaledVelocity: float = pow(velocityMagnitude, sensitivity)
+		var targetZoom: Vector2 = baseZoom - (baseZoom - minZoom) * scaledVelocity * zoomSpeed
+		targetZoom.x = clamp(targetZoom.x, minZoom.x, baseZoom.x)
+		targetZoom.y = clamp(targetZoom.y, minZoom.y, baseZoom.y)
 
-	# Apply sensitivity to the velocity magnitude
-	var scaledVelocity: float = pow(velocityMagnitude, sensitivity)
-	# Calculate the zoom level based on scaled velocity
-	var targetZoom: Vector2 = baseZoom - (baseZoom - minZoom) * scaledVelocity * zoomSpeed
-	targetZoom.x = clamp(targetZoom.x, minZoom.x, baseZoom.x)
-	targetZoom.y = clamp(targetZoom.y, minZoom.y, baseZoom.y)
-
-	# Smoothly interpolate towards the target zoom level
-	zoom = zoom.lerp(targetZoom, 0.0085)  # Adjust interpolation factor as needed
+		zoom = zoom.lerp(targetZoom, 0.0085)

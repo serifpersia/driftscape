@@ -6,7 +6,6 @@ func _on_play_pressed():
 func _on_quit_pressed():
 	get_tree().quit()
 
-
 func _on_play_mouse_entered():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 

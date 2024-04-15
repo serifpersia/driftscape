@@ -1,7 +1,5 @@
 class_name Player extends CharacterBody2D
 
-var Speed_multiplier: float = 6
-var Max_health: float = 100
 @onready var healthBar = $CanvasLayer/HealthBar
 @onready var finish_level_scene = $CanvasLayer/FinishLevelScene
 @onready var fail_level_scene = $CanvasLayer/FailLevelScene
@@ -9,7 +7,10 @@ var Max_health: float = 100
 @onready var time_label = $CanvasLayer/FinishLevelScene/MarginContainer/HBoxContainer/VBoxContainer/Time
 @onready var time_counter = $CanvasLayer/TimeCounter
 @onready var damage_taken = $CanvasLayer/DamageTaken
+@onready var movement_sound = $MovementSound
 
+var Speed_multiplier: float = 6
+var Max_health: float = 100
 var health: float = 100
 enum Rank { D = 70, C = 80, B = 85, A = 90, S = 95, SS = 100 }
 var currentRank: Rank = Rank.SS
@@ -17,8 +18,9 @@ var timeElapsed: float = 0
 var time: int = 0
 var totalDamageTaken: int = 0
 var timeString : String
-
 var score : String
+var canMove
+
 signal gameEndedSignal
 
 func _ready():
@@ -28,14 +30,25 @@ func _ready():
 	time_counter.text = "Time: "
 
 func _physics_process(delta):
-	var healthRatio: float = health / Max_health
-	Speed_multiplier = lerp(2, 6, healthRatio)
-	var targetDir: Vector2 = (get_global_mouse_position() - global_position)
-	var targetVelocity: Vector2 = targetDir * Speed_multiplier
-	velocity = velocity.lerp(targetVelocity, 0.5)
-	move_and_slide()
-	timeElapsed += delta
-	updateTimeLabel()
+	if canMove:
+		var healthRatio: float = health / Max_health
+		Speed_multiplier = lerp(2, 6, healthRatio)
+		var targetDir: Vector2 = (get_global_mouse_position() - global_position)
+		var targetVelocity: Vector2 = targetDir * Speed_multiplier
+		velocity = velocity.lerp(targetVelocity, 0.5)
+		move_and_slide()
+
+		if velocity.length() > 300:
+			var pitchScale = clamp(velocity.length() / 512.0, 0.00001, 10.0)
+			movement_sound.pitch_scale = pitchScale
+
+			if !movement_sound.playing:
+				movement_sound.play()
+		else:
+			movement_sound.stop()
+
+		timeElapsed += delta
+		updateTimeLabel()
 
 func updateTimeLabel():
 	var totalSeconds: int = time + int(timeElapsed)
@@ -49,9 +62,11 @@ func _input(event):
 	if event is InputEventMouseButton:
 		var mouse_event = event as InputEventMouseButton
 		if mouse_event.button_index == MOUSE_BUTTON_LEFT and mouse_event.pressed:
-			decrease_health(5)
+			if canMove:
+				decrease_health(5)
 		elif mouse_event.button_index == MOUSE_BUTTON_RIGHT and mouse_event.pressed:
-			increase_health(25)
+			if canMove:
+				increase_health(25)
 
 func decrease_health(amount: int):
 	health -= amount
@@ -113,4 +128,11 @@ func level_finish():
 	Global.save_data.save_score_for_level(level_name, score, timeString)
 
 func _on_area_2d_body_entered(_body):
-	decrease_health(1)
+	if canMove:
+		decrease_health(1)
+
+func pauseMovement():
+	canMove = false
+
+func resumeMovement():
+	canMove = true

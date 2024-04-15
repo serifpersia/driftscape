@@ -1,3 +1,7 @@
+AudioStreamPlayer2D
+CanvasLayer
+Timer
+Node
 Button
 WorldEnvironment
 ColorRect
@@ -9,6 +13,3 @@ VBoxContainer
 Label
 GridContainer
 GPUParticles2D
-Line2D
-RayCast2D
-AnimationPlayer
