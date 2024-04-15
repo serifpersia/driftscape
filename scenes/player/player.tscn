@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://csceag70sbadm"]
+[gd_scene load_steps=12 format=3 uid="uid://csceag70sbadm"]
 
 [ext_resource type="Texture2D" uid="uid://de6vs07lfe30k" path="res://textures/player_texture.png" id="1_7kgtu"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_mtavl"]
@@ -7,40 +7,22 @@
 [ext_resource type="PackedScene" uid="uid://bqev6quu0buwh" path="res://scenes/utils/trail_2d.tscn" id="3_2c1u8"]
 [ext_resource type="PackedScene" uid="uid://bfsjym2svavnd" path="res://scenes/menu_scenes/pause_menu.tscn" id="5_2dexs"]
 [ext_resource type="PackedScene" uid="uid://8rdpyfdcv1su" path="res://scenes/menu_scenes/finish_level_scene.tscn" id="6_jwd15"]
-[ext_resource type="Script" path="res://scripts/Object_trail.gd" id="6_weq2l"]
 [ext_resource type="PackedScene" uid="uid://b42owupk1jg6p" path="res://scenes/menu_scenes/fail_level_scene.tscn" id="7_n76cv"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_ce31e"]
-radius = 52.4057
 
 [sub_resource type="SystemFont" id="SystemFont_f3nvp"]
 font_names = PackedStringArray("Impact")
 subpixel_positioning = 0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ce31e"]
+radius = 52.4057
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_0g4sr"]
 radius = 49.1005
 
 [node name="player" type="CharacterBody2D"]
-scale = Vector2(0.325862, 0.35)
+scale = Vector2(0.4, 0.4)
 input_pickable = true
 script = ExtResource("1_mtavl")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-3.06878, 0)
-offset = Vector2(400, 0)
-zoom = Vector2(0.875, 0.875)
-limit_left = -464
-position_smoothing_enabled = true
-script = ExtResource("2_lpb50")
-
-[node name="texture" type="Sprite2D" parent="."]
-texture_filter = 1
-scale = Vector2(0.117576, 0.117794)
-texture = ExtResource("1_7kgtu")
-
-[node name="collision" type="CollisionShape2D" parent="."]
-scale = Vector2(0.878373, 0.878373)
-shape = SubResource("CircleShape2D_ce31e")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -80,10 +62,24 @@ visible = false
 [node name="FailLevelScene" parent="CanvasLayer" instance=ExtResource("7_n76cv")]
 visible = false
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-3.06878, 0)
+offset = Vector2(400, 0)
+zoom = Vector2(0.875, 0.875)
+limit_left = -464
+position_smoothing_enabled = true
+script = ExtResource("2_lpb50")
+
+[node name="texture" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.117576, 0.117794)
+texture = ExtResource("1_7kgtu")
+
+[node name="collision" type="CollisionShape2D" parent="."]
+scale = Vector2(0.878373, 0.878373)
+shape = SubResource("CircleShape2D_ce31e")
+
 [node name="Trail2D" parent="." instance=ExtResource("3_2c1u8")]
-top_level = true
-z_index = -1
-script = ExtResource("6_weq2l")
 
 [node name="detectDamage" type="Node2D" parent="."]
 

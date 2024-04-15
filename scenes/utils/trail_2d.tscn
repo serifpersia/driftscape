@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bqev6quu0buwh"]
 
-[ext_resource type="Script" path="res://scripts/Trail2D.gd" id="1_o8q42"]
+[ext_resource type="Script" path="res://scripts/Object_trail.gd" id="1_lxos3"]
 
 [sub_resource type="Curve" id="Curve_2vcyp"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -10,7 +10,9 @@ point_count = 2
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [node name="Trail2D" type="Line2D"]
+top_level = true
+z_index = -1
 width_curve = SubResource("Curve_2vcyp")
 gradient = SubResource("Gradient_cpj41")
-script = ExtResource("1_o8q42")
+script = ExtResource("1_lxos3")
 MAX_LENGTH = 25
