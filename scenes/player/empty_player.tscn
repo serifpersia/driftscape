@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://cxpu66mae7py1"]
+
+[ext_resource type="Script" path="res://scripts/empty_player.gd" id="1_n0a6j"]
+[ext_resource type="Texture2D" uid="uid://de6vs07lfe30k" path="res://textures/player_texture.png" id="1_qmuev"]
+[ext_resource type="PackedScene" uid="uid://bqev6quu0buwh" path="res://scenes/utils/trail_2d.tscn" id="2_yottg"]
+[ext_resource type="Script" path="res://scripts/Object_trail.gd" id="4_u770d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jirid"]
+radius = 47.0425
+
+[node name="empty_player" type="CharacterBody2D"]
+scale = Vector2(0.45, 0.45)
+script = ExtResource("1_n0a6j")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_qmuev")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_jirid")
+
+[node name="Trail2D" parent="." instance=ExtResource("2_yottg")]
+top_level = true
+z_index = -1
+script = ExtResource("4_u770d")

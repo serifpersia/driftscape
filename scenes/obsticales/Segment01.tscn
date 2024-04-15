@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cx8teca4vuujb"]
 
-[ext_resource type="PackedScene" uid="uid://cpdvbmkwuelv4" path="res://scenes/testColObj.tscn" id="2_c1oi5"]
-[ext_resource type="PackedScene" uid="uid://sl7ad2phj483" path="res://scenes/Door.tscn" id="2_wexqv"]
+[ext_resource type="PackedScene" uid="uid://cpdvbmkwuelv4" path="res://scenes/obsticales/testColObj.tscn" id="2_c1oi5"]
+[ext_resource type="PackedScene" uid="uid://sl7ad2phj483" path="res://scenes/obsticales/Door.tscn" id="2_wexqv"]
 
 [sub_resource type="Animation" id="Animation_rg4as"]
 resource_name = "lvl_01_segment01"

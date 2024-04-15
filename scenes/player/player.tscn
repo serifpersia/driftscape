@@ -3,12 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://de6vs07lfe30k" path="res://textures/player_texture.png" id="1_7kgtu"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_mtavl"]
 [ext_resource type="Script" path="res://scripts/Camera2D.gd" id="2_lpb50"]
-[ext_resource type="PackedScene" uid="uid://b1jw12natrmvo" path="res://scenes/healthBar.tscn" id="3_0mpwd"]
-[ext_resource type="PackedScene" uid="uid://bqev6quu0buwh" path="res://scenes/trail_2d.tscn" id="3_2c1u8"]
-[ext_resource type="PackedScene" uid="uid://bfsjym2svavnd" path="res://scenes/pause_menu.tscn" id="5_2dexs"]
-[ext_resource type="PackedScene" uid="uid://8rdpyfdcv1su" path="res://scenes/finish_level_scene.tscn" id="6_jwd15"]
+[ext_resource type="PackedScene" uid="uid://b1jw12natrmvo" path="res://scenes/canvas_ui/healthBar.tscn" id="3_0mpwd"]
+[ext_resource type="PackedScene" uid="uid://bqev6quu0buwh" path="res://scenes/utils/trail_2d.tscn" id="3_2c1u8"]
+[ext_resource type="PackedScene" uid="uid://bfsjym2svavnd" path="res://scenes/menu_scenes/pause_menu.tscn" id="5_2dexs"]
+[ext_resource type="PackedScene" uid="uid://8rdpyfdcv1su" path="res://scenes/menu_scenes/finish_level_scene.tscn" id="6_jwd15"]
 [ext_resource type="Script" path="res://scripts/Object_trail.gd" id="6_weq2l"]
-[ext_resource type="PackedScene" uid="uid://b42owupk1jg6p" path="res://scenes/fail_level_scene.tscn" id="7_n76cv"]
+[ext_resource type="PackedScene" uid="uid://b42owupk1jg6p" path="res://scenes/menu_scenes/fail_level_scene.tscn" id="7_n76cv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ce31e"]
 radius = 52.4057

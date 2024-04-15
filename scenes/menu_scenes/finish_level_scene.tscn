@@ -1,11 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://b42owupk1jg6p"]
+[gd_scene load_steps=3 format=3 uid="uid://8rdpyfdcv1su"]
 
-[ext_resource type="Script" path="res://scripts/finishfail_scene.gd" id="1_6qdso"]
+[ext_resource type="Script" path="res://scripts/finishfail_scene.gd" id="1_8rr1p"]
+[ext_resource type="PackedScene" uid="uid://can6od2otra6s" path="res://scenes/canvas_ui/button.tscn" id="2_732cx"]
 
-[sub_resource type="SystemFont" id="SystemFont_mk2x5"]
-font_names = PackedStringArray("Impact")
-
-[node name="FailLevelScene" type="Control"]
+[node name="FinishLevelScene" type="Control"]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -13,7 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_6qdso")
+script = ExtResource("1_8rr1p")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -52,27 +50,34 @@ alignment = 1
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
-text = "Level Failed!"
+text = "Level Completed!"
 
-[node name="Retry" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Score" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_mk2x5")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Time" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Time: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Retry" parent="MarginContainer/HBoxContainer/VBoxContainer" instance=ExtResource("2_732cx")]
+layout_mode = 2
 text = "Retry"
 
-[node name="Level Select" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="LevelSelect" parent="MarginContainer/HBoxContainer/VBoxContainer" instance=ExtResource("2_732cx")]
 layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_mk2x5")
-theme_override_font_sizes/font_size = 24
 text = "Level Select"
 
-[node name="MainMenu" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-process_mode = 3
+[node name="MainMenu" parent="MarginContainer/HBoxContainer/VBoxContainer" instance=ExtResource("2_732cx")]
 layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_mk2x5")
-theme_override_font_sizes/font_size = 24
-text = "Main Menu"
+text = "Main Menu
+"
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Retry" to="." method="_on_retry_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Level Select" to="." method="_on_level_select_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/LevelSelect" to="." method="_on_level_select_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/MainMenu" to="." method="_on_main_menu_pressed"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b5bks67qf3sa0"]
 
-[ext_resource type="PackedScene" uid="uid://dt7pd6b2iqgl4" path="res://scenes/spike.tscn" id="1_o2o3a"]
+[ext_resource type="PackedScene" uid="uid://dt7pd6b2iqgl4" path="res://scenes/obsticales/spike.tscn" id="1_o2o3a"]
 
 [sub_resource type="Animation" id="Animation_igdma"]
 resource_name = "spike_down_loop"

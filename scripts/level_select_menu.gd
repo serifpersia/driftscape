@@ -1,11 +1,12 @@
 extends Control
 
-const LEVEL_BTN = preload("res://scenes/lvl_btn.tscn")
+const LEVEL_BTN = preload("res://scenes/canvas_ui/lvl_btn.tscn")
 
 @export_dir var dir_path 
 @onready var grid = $MarginContainer/HBoxContainer/VBoxContainer/GridContainer
 
 func _ready():
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	get_levels(dir_path)
 
 func get_levels(path):
@@ -36,4 +37,4 @@ func create_level_btn(lvl_path: String, lvl_name: String):
 		print("Score label not found in button scene.")
 
 func _on_main_menu_pressed():
-	get_tree().change_scene_to_file("res://scenes/menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/menu_scenes/menu.tscn")

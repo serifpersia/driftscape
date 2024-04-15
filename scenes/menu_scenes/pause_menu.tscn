@@ -1,9 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bfsjym2svavnd"]
 
-[ext_resource type="Script" path="res://scripts/PauseMenu.gd" id="1_pcxoq"]
-
-[sub_resource type="SystemFont" id="SystemFont_ob0kj"]
-font_names = PackedStringArray("Impact")
+[ext_resource type="Script" path="res://scripts/PauseMenu.gd" id="1_wgsca"]
+[ext_resource type="PackedScene" uid="uid://can6od2otra6s" path="res://scenes/canvas_ui/button.tscn" id="2_mtwkg"]
 
 [node name="PauseMenu" type="Control"]
 process_mode = 3
@@ -13,7 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_pcxoq")
+script = ExtResource("1_wgsca")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -43,28 +41,20 @@ alignment = 1
 [node name="Separator2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Resume" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Resume" parent="MarginContainer/HBoxContainer/VBoxContainer" instance=ExtResource("2_mtwkg")]
 layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_ob0kj")
-theme_override_font_sizes/font_size = 24
 text = "Resume"
 
-[node name="Retry" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Retry" parent="MarginContainer/HBoxContainer/VBoxContainer" instance=ExtResource("2_mtwkg")]
 layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_ob0kj")
-theme_override_font_sizes/font_size = 24
 text = "Retry"
 
-[node name="LevelSelect" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="LevelSelect" parent="MarginContainer/HBoxContainer/VBoxContainer" instance=ExtResource("2_mtwkg")]
 layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_ob0kj")
-theme_override_font_sizes/font_size = 24
 text = "Level Select"
 
-[node name="MainMenu" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="MainMenu" parent="MarginContainer/HBoxContainer/VBoxContainer" instance=ExtResource("2_mtwkg")]
 layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_ob0kj")
-theme_override_font_sizes/font_size = 24
 text = "Main Menu"
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
