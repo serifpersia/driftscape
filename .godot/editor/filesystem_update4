@@ -1,7 +1,6 @@
+res://default_bus_layout.tres
 res://scenes/levels/level1.tscn
 res://tiles/tilesetsquare.tres
 res://themes/buttons_theme.tres
 res://scenes/player/player.tscn
-res://default_bus_layout.tres
 res://scripts/player.gd
-res://sound/default_bus_layout.tres

@@ -32,37 +32,33 @@ func _ready():
 func _physics_process(delta):
 	if canMove:
 		var healthRatio: float = health / Max_health
-		Speed_multiplier = lerp(2, 6, healthRatio)
 		var targetDir: Vector2 = (get_global_mouse_position() - global_position)
 		var targetVelocity: Vector2 = targetDir * Speed_multiplier
+		Speed_multiplier = lerp(2, 6, healthRatio)
 		velocity = velocity.lerp(targetVelocity, 0.5)
 		move_and_slide()
-
-		if velocity.length() > 256:
-			# Calculate linear gain based on velocity
-			var linearGain = db_to_linear(1.0)  # Set initial gain, adjust as needed
-			
-			# Modify gain based on velocity (example adjustment)
-			linearGain *= clamp(velocity.length() / 256.0, 1.0, 18.0)  # Adjust range as needed
-			
-			# Set the adjusted gain to the EQ band
-			var effect: AudioEffectEQ = AudioServer.get_bus_effect(AudioServer.get_bus_index("Wind"), 0)
-			if effect:
-				effect.set_band_gain_db(5, linearGain)
-			
-			if !movement_sound.playing:
-				movement_sound.play()
-		else:
-			movement_sound.stop()
-
 		timeElapsed += delta
 		updateTimeLabel()
-
+		var linearGain = db_to_linear(1.0)
+		var volumeGain = db_to_linear(1.0)
+		linearGain *= clamp(velocity.length() / 256.0, 0.0, 14.0)
+		volumeGain *= clamp(velocity.length() / 1024.0, 0.0, 1.0)
+		var wind_bus_index = AudioServer.get_bus_index("Wind")
+		var volume_db = linear_to_db(volumeGain)
+		var effect: AudioEffectEQ = AudioServer.get_bus_effect(AudioServer.get_bus_index("Wind"), 0)
+		AudioServer.set_bus_volume_db(wind_bus_index, volume_db)
+		if effect:
+			effect.set_band_gain_db(1, linearGain)
+		if !movement_sound.playing:
+			movement_sound.play()
+	else:
+		movement_sound.stop()
 
 func updateTimeLabel():
 	var totalSeconds: int = time + int(timeElapsed)
 	var minutes: int = int(float(totalSeconds) / 60)
 	var seconds: int = totalSeconds % 60
+	
 	timeString = str(minutes).pad_zeros(2) + ":" + str(seconds).pad_zeros(2)
 	time_counter.text = 'Time: ' + timeString
 	time_label.text = 'Time: ' + timeString

@@ -2,15 +2,15 @@
 
 [sub_resource type="AudioEffectEQ" id="AudioEffectEQ_dtj83"]
 resource_name = "EQ"
-band_db/32_hz = -24.0
-band_db/100_hz = -20.5
-band_db/320_hz = -17.9
+band_db/320_hz = -60.0
+band_db/1000_hz = -29.4
+band_db/3200_hz = -32.9
+band_db/10000_hz = -60.0
 
 [sub_resource type="AudioEffectReverb" id="AudioEffectReverb_1yfra"]
 resource_name = "Reverb"
-room_size = 0.3
-damping = 0.0
-wet = 0.2
+room_size = 0.17
+wet = 0.14
 
 [resource]
 bus/1/name = &"Wind"
