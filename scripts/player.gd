@@ -38,10 +38,18 @@ func _physics_process(delta):
 		velocity = velocity.lerp(targetVelocity, 0.5)
 		move_and_slide()
 
-		if velocity.length() > 300:
-			var pitchScale = clamp(velocity.length() / 512.0, 0.00001, 10.0)
-			movement_sound.pitch_scale = pitchScale
-
+		if velocity.length() > 256:
+			# Calculate linear gain based on velocity
+			var linearGain = db_to_linear(1.0)  # Set initial gain, adjust as needed
+			
+			# Modify gain based on velocity (example adjustment)
+			linearGain *= clamp(velocity.length() / 256.0, 1.0, 18.0)  # Adjust range as needed
+			
+			# Set the adjusted gain to the EQ band
+			var effect: AudioEffectEQ = AudioServer.get_bus_effect(AudioServer.get_bus_index("Wind"), 0)
+			if effect:
+				effect.set_band_gain_db(5, linearGain)
+			
 			if !movement_sound.playing:
 				movement_sound.play()
 		else:
@@ -49,6 +57,7 @@ func _physics_process(delta):
 
 		timeElapsed += delta
 		updateTimeLabel()
+
 
 func updateTimeLabel():
 	var totalSeconds: int = time + int(timeElapsed)

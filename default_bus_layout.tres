@@ -1,0 +1,25 @@
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://baqdqgwtqy1yr"]
+
+[sub_resource type="AudioEffectEQ" id="AudioEffectEQ_dtj83"]
+resource_name = "EQ"
+band_db/32_hz = -24.0
+band_db/100_hz = -20.5
+band_db/320_hz = -17.9
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_1yfra"]
+resource_name = "Reverb"
+room_size = 0.3
+damping = 0.0
+wet = 0.2
+
+[resource]
+bus/1/name = &"Wind"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = 0.265018
+bus/1/send = &"Master"
+bus/1/effect/0/effect = SubResource("AudioEffectEQ_dtj83")
+bus/1/effect/0/enabled = true
+bus/1/effect/1/effect = SubResource("AudioEffectReverb_1yfra")
+bus/1/effect/1/enabled = true

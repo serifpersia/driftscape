@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://8rdpyfdcv1su" path="res://scenes/menu_scenes/finish_level_scene.tscn" id="6_jwd15"]
 [ext_resource type="PackedScene" uid="uid://b42owupk1jg6p" path="res://scenes/menu_scenes/fail_level_scene.tscn" id="7_n76cv"]
 [ext_resource type="Script" path="res://scripts/StartTime.gd" id="9_708a0"]
-[ext_resource type="AudioStream" uid="uid://dcy1atgwbn7mu" path="res://sound/movement.ogg" id="10_8xp1t"]
+[ext_resource type="AudioStream" uid="uid://dfhjbqwqg1cxv" path="res://sound/wind_movement.ogg" id="10_hhoad"]
 
 [sub_resource type="SystemFont" id="SystemFont_f3nvp"]
 font_names = PackedStringArray("Impact")
@@ -116,7 +116,8 @@ script = ExtResource("9_708a0")
 [node name="StartTimer" type="Timer" parent="StartTime"]
 
 [node name="MovementSound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("10_8xp1t")
+stream = ExtResource("10_hhoad")
+bus = &"Wind"
 
 [connection signal="body_entered" from="detectDamage/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="StartTime/StartTimer" to="StartTime" method="_on_start_timer_timeout"]

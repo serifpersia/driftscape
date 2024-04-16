@@ -1,11 +1,7 @@
 res://scenes/levels/level1.tscn
 res://tiles/tilesetsquare.tres
 res://themes/buttons_theme.tres
-res://scenes/menu_scenes/menu.tscn
 res://scenes/player/player.tscn
-res://scenes/menu_scenes/fail_level_scene.tscn
-res://scripts/StartTime.gd
+res://default_bus_layout.tres
 res://scripts/player.gd
-res://scripts/Menu.gd
-res://scripts/finishfail_scene.gd
-res://scripts/Camera2D.gd
+res://sound/default_bus_layout.tres
