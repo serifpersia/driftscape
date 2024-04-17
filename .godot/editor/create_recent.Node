@@ -1,3 +1,4 @@
+AudioStreamPlayer
 Timer
 AudioStreamPlayer2D
 WorldEnvironment
@@ -11,4 +12,3 @@ CollisionShape2D
 CharacterBody2D
 VBoxContainer
 Label
-GridContainer

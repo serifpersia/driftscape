@@ -1,12 +1,8 @@
 res://default_bus_layout.tres
 res://scenes/levels/level1.tscn
-res://themes/buttons_theme.tres
 res://tiles/tilesetsquare.tres
-res://scenes/menu_scenes/fail_level_scene.tscn
-res://scenes/menu_scenes/finish_level_scene.tscn
-res://scripts/finishfail_scene.gd
-res://scenes/menu_scenes/menu.tscn
-res://scenes/menu_scenes/level_selector_menu.tscn
-res://scenes/menu_scenes/pause_menu.tscn
-res://scripts/fail_scene.gd
-res://scenes/canvas_ui/button.tscn
+res://themes/buttons_theme.tres
+res://scenes/player/player.tscn
+res://scripts/player.gd
+res://scenes/canvas_ui/btn_click.tscn
+res://scripts/StartTime.gd

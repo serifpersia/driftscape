@@ -16,10 +16,10 @@ font_names = PackedStringArray("Impact")
 subpixel_positioning = 0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ce31e"]
-radius = 52.4057
+radius = 29.4551
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0g4sr"]
-radius = 49.1005
+radius = 31.4286
 
 [node name="player" type="CharacterBody2D"]
 scale = Vector2(0.35, 0.35)
@@ -74,10 +74,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("5_2dexs")]
-visible = false
 
 [node name="FinishLevelScene" parent="CanvasLayer" instance=ExtResource("6_jwd15")]
-visible = false
 
 [node name="FailLevelScene" parent="CanvasLayer" instance=ExtResource("7_n76cv")]
 visible = false
@@ -85,7 +83,6 @@ visible = false
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-3.06878, 0)
 offset = Vector2(400, 0)
-zoom = Vector2(0.875, 0.875)
 limit_left = -464
 position_smoothing_enabled = true
 script = ExtResource("2_lpb50")
