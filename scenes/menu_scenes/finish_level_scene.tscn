@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://8rdpyfdcv1su"]
+[gd_scene load_steps=4 format=3 uid="uid://8rdpyfdcv1su"]
 
-[ext_resource type="Script" path="res://scripts/finishfail_scene.gd" id="1_8rr1p"]
+[ext_resource type="Script" path="res://scripts/fail_finish_scene.gd" id="1_j7cb2"]
 [ext_resource type="PackedScene" uid="uid://can6od2otra6s" path="res://scenes/canvas_ui/button.tscn" id="2_732cx"]
+[ext_resource type="PackedScene" uid="uid://b8tsw525wce4u" path="res://scenes/canvas_ui/btn_click.tscn" id="3_lgwkb"]
 
 [node name="FinishLevelScene" type="Control"]
 process_mode = 3
@@ -11,7 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_8rr1p")
+script = ExtResource("1_j7cb2")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -78,6 +79,13 @@ layout_mode = 2
 text = "Main Menu
 "
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="btn_click" parent="." instance=ExtResource("3_lgwkb")]
+
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Retry" to="." method="_on_retry_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/LevelSelect" to="." method="_on_level_select_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
