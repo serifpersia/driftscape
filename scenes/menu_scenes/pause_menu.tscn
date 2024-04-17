@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bfsjym2svavnd"]
+[gd_scene load_steps=4 format=3 uid="uid://bfsjym2svavnd"]
 
 [ext_resource type="Script" path="res://scripts/PauseMenu.gd" id="1_wgsca"]
 [ext_resource type="PackedScene" uid="uid://can6od2otra6s" path="res://scenes/canvas_ui/button.tscn" id="2_mtwkg"]
+[ext_resource type="PackedScene" uid="uid://b8tsw525wce4u" path="res://scenes/canvas_ui/btn_click.tscn" id="3_2ebv3"]
 
 [node name="PauseMenu" type="Control"]
 process_mode = 3
@@ -57,7 +58,14 @@ text = "Level Select"
 layout_mode = 2
 text = "Main Menu"
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="btn_click" parent="." instance=ExtResource("3_2ebv3")]
+
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Retry" to="." method="_on_retry_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/LevelSelect" to="." method="_on_level_select_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

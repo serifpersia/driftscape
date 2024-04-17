@@ -4,6 +4,8 @@ const LEVEL_BTN = preload("res://scenes/canvas_ui/lvl_btn.tscn")
 
 @export_dir var dir_path 
 @onready var grid = $MarginContainer/HBoxContainer/VBoxContainer/GridContainer
+@onready var timer = $Timer
+@onready var btn_click = $btn_click
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
@@ -36,5 +38,12 @@ func create_level_btn(lvl_path: String, lvl_name: String):
 	else:
 		print("Score label not found in button scene.")
 
+func play_click():
+	timer.start()
+	btn_click.play()
+
 func _on_main_menu_pressed():
+	play_click()
+
+func _on_timer_timeout():
 	get_tree().change_scene_to_file("res://scenes/menu_scenes/menu.tscn")

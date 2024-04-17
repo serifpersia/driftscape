@@ -1,10 +1,17 @@
 extends Control
 
+@onready var timer = $Timer
+@onready var btn_click = $btn_click
+
+var last_pressed_button = null
+
 func _on_play_pressed():
-	get_tree().change_scene_to_file("res://scenes/menu_scenes/level_selector_menu.tscn")
+	play_click()
+	last_pressed_button = "play"
 
 func _on_quit_pressed():
-	get_tree().quit()
+	play_click()
+	last_pressed_button = "quit"
 
 func _on_play_mouse_entered():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -20,3 +27,14 @@ func _on_quit_mouse_entered():
 
 func _on_quit_mouse_exited():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+
+
+func play_click():
+	timer.start()
+	btn_click.play()
+
+func _on_timer_timeout():
+	if last_pressed_button == "quit":
+		get_tree().quit()
+	elif last_pressed_button == "play":
+		get_tree().change_scene_to_file("res://scenes/menu_scenes/level_selector_menu.tscn")

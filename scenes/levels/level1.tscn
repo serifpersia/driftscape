@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://3i10cdnk6wh2"]
+[gd_scene load_steps=13 format=3 uid="uid://3i10cdnk6wh2"]
 
 [ext_resource type="TileSet" uid="uid://bkmwojm6pgcno" path="res://tiles/tilesetsquare.tres" id="1_r23fe"]
 [ext_resource type="PackedScene" uid="uid://df1t1p46ihbo" path="res://scenes/level_utils/regen_area.tscn" id="2_nu85k"]
@@ -11,6 +11,12 @@
 [ext_resource type="PackedScene" uid="uid://b5bks67qf3sa0" path="res://scenes/obsticales/single_spike_loop_faster.tscn" id="9_no7l0"]
 [ext_resource type="PackedScene" uid="uid://csceag70sbadm" path="res://scenes/player/player.tscn" id="10_0v6lo"]
 [ext_resource type="PackedScene" uid="uid://byhk5t6w6gw51" path="res://scenes/utils/custom cursor.tscn" id="11_r4gmn"]
+
+[sub_resource type="Environment" id="Environment_mw4hi"]
+background_mode = 3
+glow_enabled = true
+glow_bloom = 0.1
+glow_blend_mode = 0
 
 [node name="level1" type="Node2D"]
 
@@ -50,3 +56,6 @@ rotation = 3.14159
 position = Vector2(128, 360)
 
 [node name="custom cursor" parent="." instance=ExtResource("11_r4gmn")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_mw4hi")

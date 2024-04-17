@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dplbuib6q5a3j"]
+[gd_scene load_steps=5 format=3 uid="uid://dplbuib6q5a3j"]
 
 [ext_resource type="Script" path="res://scripts/level_select_menu.gd" id="1_yrggx"]
 [ext_resource type="PackedScene" uid="uid://can6od2otra6s" path="res://scenes/canvas_ui/button.tscn" id="2_wdxbo"]
+[ext_resource type="PackedScene" uid="uid://b8tsw525wce4u" path="res://scenes/canvas_ui/btn_click.tscn" id="3_faqob"]
 
 [sub_resource type="SystemFont" id="SystemFont_ujoka"]
 font_names = PackedStringArray("Impact")
@@ -73,4 +74,11 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Main Menu"
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="btn_click" parent="." instance=ExtResource("3_faqob")]
+
 [connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

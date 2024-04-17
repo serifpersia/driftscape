@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bsbg3g3kfx6f"]
+[gd_scene load_steps=7 format=3 uid="uid://bsbg3g3kfx6f"]
 
 [ext_resource type="Script" path="res://scripts/Menu.gd" id="1_u5biy"]
 [ext_resource type="PackedScene" uid="uid://bqwx6pj2t8ia0" path="res://scenes/level_utils/ingame_blurred.tscn" id="2_gmth2"]
 [ext_resource type="PackedScene" uid="uid://can6od2otra6s" path="res://scenes/canvas_ui/button.tscn" id="3_phbaw"]
+[ext_resource type="PackedScene" uid="uid://b8tsw525wce4u" path="res://scenes/canvas_ui/btn_click.tscn" id="4_xuhxx"]
 
 [sub_resource type="SystemFont" id="SystemFont_ujoka"]
 font_names = PackedStringArray("Impact")
@@ -10,8 +11,8 @@ font_names = PackedStringArray("Impact")
 [sub_resource type="Environment" id="Environment_lrjeq"]
 background_mode = 3
 glow_enabled = true
-glow_bloom = 0.12
-glow_blend_mode = 0
+glow_bloom = 0.1
+glow_blend_mode = 1
 
 [node name="Menu" type="Control"]
 process_mode = 3
@@ -75,9 +76,16 @@ text = "Quit"
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_lrjeq")
 
+[node name="btn_click" parent="." instance=ExtResource("4_xuhxx")]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
 [connection signal="mouse_entered" from="MarginContainer/HBoxContainer/VBoxContainer/Play" to="." method="_on_play_mouse_entered"]
 [connection signal="mouse_exited" from="MarginContainer/HBoxContainer/VBoxContainer/Play" to="." method="_on_play_mouse_exited"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="mouse_entered" from="MarginContainer/HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_mouse_entered"]
 [connection signal="mouse_exited" from="MarginContainer/HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_mouse_exited"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
