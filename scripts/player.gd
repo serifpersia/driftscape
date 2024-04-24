@@ -20,6 +20,7 @@ var totalDamageTaken: int = 0
 var timeString : String
 var score : String
 var canMove
+var speedRatio = 1.0
 
 signal gameEndedSignal
 
@@ -31,10 +32,9 @@ func _ready():
 
 func _physics_process(delta):
 	if canMove:
-		var healthRatio: float = health / Max_health
+		Speed_multiplier = lerp(2, 6, speedRatio)
 		var targetDir: Vector2 = (get_global_mouse_position() - global_position)
 		var targetVelocity: Vector2 = targetDir * Speed_multiplier
-		Speed_multiplier = lerp(2, 6, healthRatio)
 		velocity = velocity.lerp(targetVelocity, 0.5)
 		move_and_slide()
 		timeElapsed += delta
@@ -88,6 +88,8 @@ func increase_health(amount: int):
 	health = min(health, Max_health)
 	if healthBar != null:
 		healthBar._set_health(health)
+	if speedRatio < 1:
+		speedRatio += 0.1
 	updateRank()
 
 func updateRank():
@@ -134,7 +136,8 @@ func level_finish():
 
 func _on_area_2d_body_entered(_body):
 	if canMove:
-		decrease_health(1)
+		if speedRatio >= 0.25:
+			speedRatio -= 0.1
 
 func pauseMovement():
 	canMove = false

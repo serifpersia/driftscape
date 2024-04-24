@@ -1,12 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://dt7pd6b2iqgl4"]
+[gd_scene load_steps=3 format=3 uid="uid://dt7pd6b2iqgl4"]
 
 [ext_resource type="Texture2D" uid="uid://dlr1ag332ctd1" path="res://textures/spike.png" id="1_28nhx"]
+[ext_resource type="Script" path="res://scripts/damagePlayer.gd" id="1_ov8y2"]
 
 [node name="Spike" type="AnimatableBody2D"]
-collision_layer = 3
+script = ExtResource("1_ov8y2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_28nhx")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-64, -64, 64, -64, 0, 64)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="damageArea" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-64, -64, 64, -64, 0, 64)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

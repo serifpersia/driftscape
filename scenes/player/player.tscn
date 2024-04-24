@@ -74,8 +74,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("5_2dexs")]
+visible = false
 
 [node name="FinishLevelScene" parent="CanvasLayer" instance=ExtResource("6_jwd15")]
+visible = false
 
 [node name="FailLevelScene" parent="CanvasLayer" instance=ExtResource("7_n76cv")]
 visible = false

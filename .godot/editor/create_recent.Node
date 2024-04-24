@@ -1,3 +1,7 @@
+Area2D
+CollisionPolygon2D
+AnimationPlayer
+Node2D
 AudioStreamPlayer
 Timer
 AudioStreamPlayer2D
@@ -8,7 +12,3 @@ Button
 ColorRect
 TileMap
 Sprite2D
-CollisionShape2D
-CharacterBody2D
-VBoxContainer
-Label

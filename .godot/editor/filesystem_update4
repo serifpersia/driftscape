@@ -2,7 +2,16 @@ res://default_bus_layout.tres
 res://scenes/levels/level1.tscn
 res://tiles/tilesetsquare.tres
 res://themes/buttons_theme.tres
-res://scenes/player/player.tscn
+res://scenes/obsticales/laser.tscn
+res://scenes/obsticales/moving laser_1_horizontal.tscn
+res://scenes/obsticales/animated_obsticale.tscn
+res://scenes/levels/level2.tscn
+res://scripts/laser.gd
 res://scripts/player.gd
-res://scenes/canvas_ui/btn_click.tscn
-res://scripts/StartTime.gd
+res://scenes/obsticales/spike.tscn
+res://scripts/damagePlayer.gd
+res://scenes/level_utils/regen_area.tscn
+res://scripts/regen_area.gd
+res://scenes/obsticales/Door.tscn
+res://scenes/obsticales/testColObj.tscn
+res://scenes/player/player.tscn
