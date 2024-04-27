@@ -1,9 +1,7 @@
-res://default_bus_layout.tres
-res://scenes/obsticales/laser.tscn
+res://scenes/levels/level1.tscn
 res://tiles/tilesetsquare.tres
 res://themes/buttons_theme.tres
-res://scripts/laser.gd
-res://scenes/levels/level1.tscn
+res://scenes/obsticales/laser.tscn
 res://scenes/levels/level2.tscn
-res://scripts/player.gd
 res://scenes/player/player.tscn
+res://default_bus_layout.tres

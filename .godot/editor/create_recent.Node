@@ -1,3 +1,5 @@
+ColorRect
+TextureRect
 AudioStreamPlayer2D
 AnimationPlayer
 Node
@@ -9,6 +11,4 @@ Timer
 WorldEnvironment
 CanvasLayer
 Button
-ColorRect
 TileMap
-Sprite2D
