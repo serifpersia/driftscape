@@ -1,13 +1,13 @@
+AudioStreamPlayer2D
+AnimationPlayer
+Node
 Area2D
 CollisionPolygon2D
-AnimationPlayer
 Node2D
 AudioStreamPlayer
 Timer
-AudioStreamPlayer2D
 WorldEnvironment
 CanvasLayer
-Node
 Button
 ColorRect
 TileMap

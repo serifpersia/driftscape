@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqgbqbbjggsog"]
+[gd_scene load_steps=4 format=3 uid="uid://ly5wvhm3isdx"]
 
-[ext_resource type="PackedScene" uid="uid://ckkl2yi4ttby0" path="res://scenes/obsticales/laser.tscn" id="1_xi7aq"]
+[ext_resource type="PackedScene" uid="uid://ckkl2yi4ttby0" path="res://scenes/obsticales/laser.tscn" id="1_h8xlg"]
 
 [sub_resource type="Animation" id="Animation_0s6on"]
 resource_name = "anim1"
@@ -16,7 +16,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5, 1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [-0.610865, 0.0, 0.610865]
+"values": [0.610865, 0.0, -0.610865]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uy6uv"]
@@ -24,10 +24,10 @@ _data = {
 "anim1": SubResource("Animation_0s6on")
 }
 
-[node name="moving laser_2_horizontal" type="Node2D"]
-rotation = -0.610865
+[node name="moving laser_1_horizontal" type="Node2D"]
+rotation = 0.610865
 
-[node name="LaserRoot" parent="." instance=ExtResource("1_xi7aq")]
+[node name="LaserRoot" parent="." instance=ExtResource("1_h8xlg")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
