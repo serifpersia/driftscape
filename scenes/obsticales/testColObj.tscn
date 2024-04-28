@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://6f2pmjgnfcaq" path="res://textures/wall_oppening.png" id="1_yvk3n"]
 
 [node name="testColObj" type="AnimatableBody2D"]
+modulate = Color(1.75, 1.75, 1.75, 1)
 script = ExtResource("1_tytan")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

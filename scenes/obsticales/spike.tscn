@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://scripts/damagePlayer.gd" id="1_ov8y2"]
 
 [node name="Spike" type="AnimatableBody2D"]
+modulate = Color(1.35, 1.35, 1.35, 1)
 script = ExtResource("1_ov8y2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

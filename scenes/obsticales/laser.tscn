@@ -12,6 +12,7 @@ packet_sequence = SubResource("OggPacketSequence_7ptvw")
 loop = true
 
 [node name="LaserRoot" type="Node2D"]
+modulate = Color(2, 0, 0, 1)
 z_index = -1
 
 [node name="Laser" type="RayCast2D" parent="."]
@@ -20,9 +21,9 @@ script = ExtResource("1_xiqnp")
 
 [node name="Line2D" type="Line2D" parent="Laser"]
 points = PackedVector2Array(0, 0, 0, 100, 0, 0, 0, 0, 0, 0)
-default_color = Color(1, 0, 0, 1)
 
 [node name="laser_sound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, 256)
 stream = SubResource("AudioStreamOggVorbis_bwreu")
 max_distance = 1500.0
 attenuation = 2.69739

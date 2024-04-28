@@ -65,7 +65,7 @@ skip={
 
 [rendering]
 
-renderer/rendering_method="mobile"
 environment/defaults/default_clear_color=Color(0.0980392, 0.0980392, 0.0980392, 1)
+viewport/hdr_2d=true
 viewport/snap/snap_2d_vertices_to_pixel=false
 viewport/snap/snap_2d_transforms_to_pixel=false

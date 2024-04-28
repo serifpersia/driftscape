@@ -23,6 +23,7 @@ radial_accel_max = 30.0
 color_ramp = SubResource("GradientTexture1D_vdojj")
 
 [node name="regen_area" type="Node2D"]
+modulate = Color(0.5, 2, 0, 1)
 script = ExtResource("1_t2v4s")
 
 [node name="Area2D" type="Area2D" parent="."]

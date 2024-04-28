@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bsbg3g3kfx6f"]
+[gd_scene load_steps=6 format=3 uid="uid://bsbg3g3kfx6f"]
 
 [ext_resource type="Script" path="res://scripts/Menu.gd" id="1_u5biy"]
 [ext_resource type="PackedScene" uid="uid://bqwx6pj2t8ia0" path="res://scenes/level_utils/ingame_blurred.tscn" id="2_gmth2"]
@@ -7,12 +7,6 @@
 
 [sub_resource type="SystemFont" id="SystemFont_ujoka"]
 font_names = PackedStringArray("Impact")
-
-[sub_resource type="Environment" id="Environment_lrjeq"]
-background_mode = 3
-glow_enabled = true
-glow_bloom = 0.1
-glow_blend_mode = 1
 
 [node name="Menu" type="Control"]
 process_mode = 3
@@ -72,9 +66,6 @@ text = "Play"
 [node name="Quit" parent="MarginContainer/HBoxContainer/VBoxContainer" instance=ExtResource("3_phbaw")]
 layout_mode = 2
 text = "Quit"
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_lrjeq")
 
 [node name="btn_click" parent="." instance=ExtResource("4_xuhxx")]
 

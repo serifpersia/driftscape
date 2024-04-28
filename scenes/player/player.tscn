@@ -22,6 +22,7 @@ radius = 48.7915
 radius = 48.5714
 
 [node name="player" type="CharacterBody2D"]
+modulate = Color(1.5, 1.5, 2, 1)
 scale = Vector2(0.35, 0.35)
 input_pickable = true
 script = ExtResource("1_mtavl")
