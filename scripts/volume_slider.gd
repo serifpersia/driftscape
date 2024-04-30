@@ -7,7 +7,7 @@ func _ready():
 	var volume_value = Global.save_options.get_volume_value(bus_name)
 	bus_index = AudioServer.get_bus_index(bus_name)
 	
-	if Global.save_options.get_defaults("Default") == 1:
+	if Global.save_options.get_defaults("Default") == -1:
 		value = get_default_value(bus_name)
 	else:
 		value = volume_value

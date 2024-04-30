@@ -28,7 +28,7 @@ func get_defaults(defaultsName: String) -> int:
 	if use_defaults.has(defaultsName):
 		return use_defaults[defaultsName]
 	else:
-		return 1
+		return -1
 
 func get_volume_value(volume_name: String) -> float:
 	if volume_values.has(volume_name):

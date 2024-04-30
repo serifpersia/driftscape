@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cb4qqw3f8rc7g"]
+[gd_scene load_steps=12 format=3 uid="uid://cb4qqw3f8rc7g"]
 
 [ext_resource type="Script" path="res://scripts/options_menu.gd" id="1_8p3jn"]
 [ext_resource type="PackedScene" uid="uid://can6od2otra6s" path="res://scenes/canvas_ui/button.tscn" id="2_kmke2"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/fullscreenToggle.gd" id="3_k7al8"]
 [ext_resource type="PackedScene" uid="uid://du8ibx1qes1h7" path="res://scenes/canvas_ui/volume_slider.tscn" id="3_rh4n7"]
 [ext_resource type="PackedScene" uid="uid://b8tsw525wce4u" path="res://scenes/canvas_ui/btn_click.tscn" id="3_xnno8"]
+[ext_resource type="Script" path="res://scripts/resolutionSelected.gd" id="4_g1hg6"]
 
 [sub_resource type="SystemFont" id="SystemFont_ujoka"]
 font_names = PackedStringArray("Impact")
@@ -113,6 +114,7 @@ popup/item_1/text = "1920x1080"
 popup/item_1/id = 1
 popup/item_2/text = "2560x1440"
 popup/item_2/id = 2
+script = ExtResource("4_g1hg6")
 
 [node name="BoxContainer" type="BoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -176,5 +178,7 @@ one_shot = true
 
 [node name="btn_click" parent="." instance=ExtResource("3_xnno8")]
 
+[connection signal="item_selected" from="MarginContainer/HBoxContainer/VBoxContainer/GridContainer5/fullscreenToggle" to="MarginContainer/HBoxContainer/VBoxContainer/GridContainer5/fullscreenToggle" method="_on_item_selected"]
+[connection signal="item_selected" from="MarginContainer/HBoxContainer/VBoxContainer/GridContainer/resolutionSelected" to="MarginContainer/HBoxContainer/VBoxContainer/GridContainer/resolutionSelected" method="_on_item_selected"]
 [connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
