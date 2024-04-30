@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnj6crbyghia7"]
+
+[ext_resource type="Texture2D" uid="uid://bs384vyhn0shh" path="res://textures/rect_collObj.png" id="1_ofn5k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o4l65"]
+size = Vector2(128, 128)
+
+[node name="GravityTestObj" type="RigidBody2D"]
+mass = 2.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ofn5k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_o4l65")

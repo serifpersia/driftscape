@@ -21,6 +21,7 @@ var timeString : String
 var score : String
 var canMove
 var speedRatio = 1.0
+var push_force = 50.0
 
 signal gameEndedSignal
 
@@ -37,6 +38,12 @@ func _physics_process(delta):
 		var targetVelocity: Vector2 = targetDir * Speed_multiplier
 		velocity = velocity.lerp(targetVelocity, 0.5)
 		move_and_slide()
+		
+		for i in get_slide_collision_count():
+			var c = get_slide_collision(i)
+			if c.get_collider() is RigidBody2D:
+				c.get_collider().apply_central_impulse(-c.get_normal() * push_force)
+		
 		timeElapsed += delta
 		updateTimeLabel()
 		var linearGain = db_to_linear(1.0)
@@ -137,7 +144,7 @@ func level_finish():
 func _on_area_2d_body_entered(_body):
 	if canMove:
 		if speedRatio >= 0.25:
-			speedRatio -= 0.1
+			speedRatio -= 0.15
 
 func pauseMovement():
 	canMove = false

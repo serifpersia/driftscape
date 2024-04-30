@@ -14,11 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://b5bks67qf3sa0" path="res://scenes/obsticales/single_spike_loop_faster.tscn" id="9_no7l0"]
 [ext_resource type="PackedScene" uid="uid://csceag70sbadm" path="res://scenes/player/player.tscn" id="10_0v6lo"]
 [ext_resource type="PackedScene" uid="uid://byhk5t6w6gw51" path="res://scenes/utils/custom cursor.tscn" id="11_r4gmn"]
-
-[sub_resource type="Environment" id="Environment_mw4hi"]
-background_mode = 3
-glow_enabled = true
-glow_blend_mode = 1
+[ext_resource type="PackedScene" uid="uid://b6wt0wd4jfqf" path="res://scenes/level_utils/world_environment.tscn" id="15_4h63u"]
 
 [node name="level1" type="Node2D"]
 
@@ -75,5 +71,4 @@ position = Vector2(128, 360)
 
 [node name="custom cursor" parent="." instance=ExtResource("11_r4gmn")]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_mw4hi")
+[node name="WorldEnvironment" parent="." instance=ExtResource("15_4h63u")]
