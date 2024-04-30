@@ -50,9 +50,9 @@ func _physics_process(delta):
 		var volumeGain = db_to_linear(1.0)
 		linearGain *= clamp(velocity.length() / 256.0, 0.0, 14.0)
 		volumeGain *= clamp(velocity.length() / 1024.0, 0.0, 0.75)
-		var wind_bus_index = AudioServer.get_bus_index("Wind")
+		var wind_bus_index = AudioServer.get_bus_index("Player")
 		var volume_db = linear_to_db(volumeGain)
-		var effect: AudioEffectEQ = AudioServer.get_bus_effect(AudioServer.get_bus_index("Wind"), 0)
+		var effect: AudioEffectEQ = AudioServer.get_bus_effect(AudioServer.get_bus_index("Player"), 0)
 		AudioServer.set_bus_volume_db(wind_bus_index, volume_db)
 		if effect:
 			effect.set_band_gain_db(1, linearGain)

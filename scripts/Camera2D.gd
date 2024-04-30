@@ -1,6 +1,6 @@
 extends Camera2D
 
-var baseZoom: Vector2 = Vector2(1.35, 1.35)
+var baseZoom: Vector2 = Vector2(1.15, 1.15)
 var minZoom: Vector2 = Vector2(0.25, 0.25)
 var zoomSpeed: float = 0.1
 var sensitivity: float = 0.25

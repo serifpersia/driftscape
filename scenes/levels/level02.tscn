@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://sldoh50tbhos"]
+
+[ext_resource type="TileSet" uid="uid://bkmwojm6pgcno" path="res://tiles/tilesetsquare.tres" id="1_47kkj"]
+[ext_resource type="PackedScene" uid="uid://b6wt0wd4jfqf" path="res://scenes/level_utils/world_environment.tscn" id="6_2rw1s"]
+[ext_resource type="PackedScene" uid="uid://csceag70sbadm" path="res://scenes/player/player.tscn" id="10_48uok"]
+[ext_resource type="PackedScene" uid="uid://byhk5t6w6gw51" path="res://scenes/utils/custom cursor.tscn" id="11_vhk80"]
+
+[node name="level02" type="Node2D"]
+
+[node name="wallTiles" type="TileMap" parent="."]
+tile_set = ExtResource("1_47kkj")
+format = 2
+
+[node name="player" parent="." instance=ExtResource("10_48uok")]
+
+[node name="custom cursor" parent="." instance=ExtResource("11_vhk80")]
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("6_2rw1s")]

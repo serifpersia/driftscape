@@ -56,7 +56,8 @@ alignment = 1
 
 [node name="GridContainer" type="GridContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/h_separation = 50
+theme_override_constants/h_separation = 75
+theme_override_constants/v_separation = 75
 columns = 5
 
 [node name="MainMenu" parent="." instance=ExtResource("2_wdxbo")]

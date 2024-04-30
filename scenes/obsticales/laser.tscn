@@ -27,4 +27,4 @@ position = Vector2(0, 256)
 stream = SubResource("AudioStreamOggVorbis_bwreu")
 max_distance = 1500.0
 attenuation = 2.69739
-bus = &"Laser"
+bus = &"SFX"
