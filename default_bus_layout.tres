@@ -13,12 +13,12 @@ room_size = 0.17
 wet = 0.14
 
 [resource]
-bus/0/volume_db = 0.0672607
+bus/0/volume_db = 0.267241
 bus/1/name = &"SFX"
 bus/1/solo = false
 bus/1/mute = false
 bus/1/bypass_fx = false
-bus/1/volume_db = -5.04224
+bus/1/volume_db = -5.32994
 bus/1/send = &"Master"
 bus/2/name = &"Player"
 bus/2/solo = false
@@ -34,5 +34,5 @@ bus/3/name = &"BGM"
 bus/3/solo = false
 bus/3/mute = false
 bus/3/bypass_fx = false
-bus/3/volume_db = -14.6228
+bus/3/volume_db = -15.1981
 bus/3/send = &"Master"

@@ -139,7 +139,7 @@ func level_finish():
 	var current_scene = get_tree().get_current_scene()
 	var level_name = current_scene.get_name()
 
-	Global.save_data.save_score_for_level(level_name, score, timeString)
+	Global.save_scores.save_score_for_level(level_name, score, timeString)
 
 func _on_area_2d_body_entered(_body):
 	if canMove:
