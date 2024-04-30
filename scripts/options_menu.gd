@@ -13,19 +13,21 @@ func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func play_click():
-	save_options(master_vol)
-	save_options(sfx_vol)
-	save_options(bgm_vol)
-	
-	Global.save_options.save_defaults("Default", 0)
-	Global.save_options.save_defaults("Fullscreen", fullscreen_toggle.selected)
-	Global.save_options.save_defaults("Resolution", resolution_selected.selected)
+	save_vol_options(master_vol)
+	save_vol_options(sfx_vol)
+	save_vol_options(bgm_vol)
+	save_display_options()
 	
 	timer.start()
 	btn_click.play()
 
-func save_options(vol):
+func save_vol_options(vol):
 	Global.save_options.save_volume_for_bus(vol.bus_name, vol.value)
+
+func save_display_options():
+	Global.save_options.save_defaults("Default", 0)
+	Global.save_options.save_defaults("Fullscreen", fullscreen_toggle.selected)
+	Global.save_options.save_defaults("Resolution", resolution_selected.selected)
 
 func _on_main_menu_pressed():
 	play_click()
