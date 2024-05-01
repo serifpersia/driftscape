@@ -1,12 +1,5 @@
 res://default_bus_layout.tres
-res://scripts/fullscreenToggle.gd
-res://scenes/menu_scenes/options_menu.tscn
+res://scenes/player/player.tscn
 res://tiles/tilesetsquare.tres
 res://themes/buttons_theme.tres
 res://scenes/levels/level01.tscn
-res://scripts/resolutionSelected.gd
-res://scripts/global.gd
-res://scripts/options_menu.gd
-res://scripts/saveoptions.gd
-res://scenes/canvas_ui/volume_slider.tscn
-res://scripts/volume_slider.gd

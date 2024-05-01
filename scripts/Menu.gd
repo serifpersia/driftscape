@@ -5,6 +5,9 @@ extends Control
 
 var last_pressed_button = null
 
+func _ready():
+	AudioPlayer.play_bgm_menu()
+
 func _on_play_pressed():
 	play_click()
 	last_pressed_button = "play"

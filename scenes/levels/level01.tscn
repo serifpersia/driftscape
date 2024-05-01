@@ -1,12 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://dms222mf8le1u"]
+[gd_scene load_steps=7 format=3 uid="uid://dms222mf8le1u"]
 
 [ext_resource type="TileSet" uid="uid://bkmwojm6pgcno" path="res://tiles/tilesetsquare.tres" id="1_13atw"]
+[ext_resource type="Script" path="res://scripts/bgm_stage1.gd" id="1_qphh5"]
 [ext_resource type="PackedScene" uid="uid://csceag70sbadm" path="res://scenes/player/player.tscn" id="2_7wprs"]
 [ext_resource type="PackedScene" uid="uid://byhk5t6w6gw51" path="res://scenes/utils/custom cursor.tscn" id="3_b1c25"]
 [ext_resource type="PackedScene" uid="uid://b6wt0wd4jfqf" path="res://scenes/level_utils/world_environment.tscn" id="4_lrbju"]
 [ext_resource type="PackedScene" uid="uid://bx6hcycvhgr7a" path="res://scenes/level_utils/finish_area.tscn" id="5_mmj0p"]
 
 [node name="level01" type="Node2D"]
+script = ExtResource("1_qphh5")
 
 [node name="wallTiles" type="TileMap" parent="."]
 tile_set = ExtResource("1_13atw")

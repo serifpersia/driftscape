@@ -19,6 +19,7 @@ config/icon="res://textures/icon.svg"
 [autoload]
 
 Global="*res://scripts/global.gd"
+AudioPlayer="*res://scenes/level_utils/audio_player.tscn"
 
 [display]
 
