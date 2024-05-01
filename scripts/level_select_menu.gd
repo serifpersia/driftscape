@@ -10,6 +10,7 @@ const LEVEL_BTN = preload("res://scenes/canvas_ui/lvl_btn.tscn")
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	get_levels(dir_path)
+	AudioPlayer.play_bgm_menu()
 
 func get_levels(path):
 	var dir = DirAccess.open(path)

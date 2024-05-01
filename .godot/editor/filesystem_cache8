@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1714569900
-default_bus_layout.tres::AudioBusLayout::2419661801450261833::1714569874::0::1::::<><>::
+::res://::1714570139
+default_bus_layout.tres::AudioBusLayout::2419661801450261833::1714569901::0::1::::<><>::
 ::res://scenes/::1714493819
 ::res://scenes/canvas_ui/::1714507740
 btn_click.tscn::PackedScene::4743009513213779438::1714493819::0::1::::<><>::uid://bvbhatucsu5mo::::res://sound/btn_sound.wav
@@ -8,8 +8,8 @@ button.tscn::PackedScene::4801585706021333352::1714493819::0::1::::<><>::uid://y
 healthBar.tscn::PackedScene::4231293660789854976::1714493819::0::1::::<><>::res://scripts/HealthBar.gd
 lvl_btn.tscn::PackedScene::476574790997168477::1714493819::0::1::::<><>::uid://yys17mde0tii::::res://themes/buttons_theme.tres<>res://scripts/lvl_btn.gd<>uid://b8tsw525wce4u::::res://scenes/canvas_ui/btn_click.tscn
 volume_slider.tscn::PackedScene::8631652160394978118::1714507740::0::1::::<><>::res://scripts/volume_slider.gd
-::res://scenes/levels/::1714569889
-level01.tscn::PackedScene::8040375986488715424::1714569889::0::1::::<><>::uid://bkmwojm6pgcno::::res://tiles/tilesetsquare.tres<>res://scripts/bgm_stage1.gd<>uid://csceag70sbadm::::res://scenes/player/player.tscn<>uid://byhk5t6w6gw51::::res://scenes/utils/custom cursor.tscn<>uid://b6wt0wd4jfqf::::res://scenes/level_utils/world_environment.tscn<>uid://bx6hcycvhgr7a::::res://scenes/level_utils/finish_area.tscn
+::res://scenes/levels/::1714569960
+level01.tscn::PackedScene::8040375986488715424::1714569960::0::1::::<><>::uid://bkmwojm6pgcno::::res://tiles/tilesetsquare.tres<>res://scripts/bgm_stage1.gd<>uid://csceag70sbadm::::res://scenes/player/player.tscn<>uid://byhk5t6w6gw51::::res://scenes/utils/custom cursor.tscn<>uid://b6wt0wd4jfqf::::res://scenes/level_utils/world_environment.tscn<>uid://bx6hcycvhgr7a::::res://scenes/level_utils/finish_area.tscn
 level02.tscn::PackedScene::1286314908041115746::1714569599::0::1::::<><>::uid://bkmwojm6pgcno::::res://tiles/tilesetsquare.tres<>res://scripts/bgm_stage1.gd<>uid://b6wt0wd4jfqf::::res://scenes/level_utils/world_environment.tscn<>uid://csceag70sbadm::::res://scenes/player/player.tscn<>uid://byhk5t6w6gw51::::res://scenes/utils/custom cursor.tscn
 level03.tscn::PackedScene::698951203121455689::1714569599::0::1::::<><>::res://scripts/bgm_stage1.gd<>uid://bkmwojm6pgcno::::res://tiles/tilesetsquare.tres<>uid://csceag70sbadm::::res://scenes/player/player.tscn<>uid://byhk5t6w6gw51::::res://scenes/utils/custom cursor.tscn<>uid://b6wt0wd4jfqf::::res://scenes/level_utils/world_environment.tscn
 level04.tscn::PackedScene::4186506082725917951::1714569599::0::1::::<><>::res://scripts/bgm_stage1.gd<>uid://bkmwojm6pgcno::::res://tiles/tilesetsquare.tres<>uid://csceag70sbadm::::res://scenes/player/player.tscn<>uid://byhk5t6w6gw51::::res://scenes/utils/custom cursor.tscn<>uid://b6wt0wd4jfqf::::res://scenes/level_utils/world_environment.tscn
@@ -52,9 +52,9 @@ single_spike_loop.tscn::PackedScene::7086418383411992407::1714493819::0::1::::<>
 single_spike_loop_faster.tscn::PackedScene::4494791363198450705::1714493819::0::1::::<><>::uid://dt7pd6b2iqgl4::::res://scenes/obsticales/spike.tscn
 spike.tscn::PackedScene::8559827911611785163::1714493819::0::1::::<><>::uid://dlr1ag332ctd1::::res://textures/spike.png<>res://scripts/damagePlayer.gd
 testColObj.tscn::PackedScene::5833144644615590451::1714493819::0::1::::<><>::res://scripts/damagePlayer.gd<>uid://6f2pmjgnfcaq::::res://textures/wall_oppening.png
-::res://scenes/player/::1714569112
+::res://scenes/player/::1714569960
 empty_player.tscn::PackedScene::6419421783606353350::1714493819::0::1::::<><>::res://scripts/empty_player.gd<>uid://de6vs07lfe30k::::res://textures/player_texture.png<>uid://bqev6quu0buwh::::res://scenes/utils/trail_2d.tscn
-player.tscn::PackedScene::6040612542083791674::1714569112::0::1::::<><>::uid://de6vs07lfe30k::::res://textures/player_texture.png<>res://scripts/player.gd<>res://scripts/Camera2D.gd<>uid://b1jw12natrmvo::::res://scenes/canvas_ui/healthBar.tscn<>uid://bqev6quu0buwh::::res://scenes/utils/trail_2d.tscn<>uid://bfsjym2svavnd::::res://scenes/menu_scenes/pause_menu.tscn<>uid://8rdpyfdcv1su::::res://scenes/menu_scenes/finish_level_scene.tscn<>uid://b42owupk1jg6p::::res://scenes/menu_scenes/fail_level_scene.tscn<>res://scripts/StartTime.gd<>uid://dfhjbqwqg1cxv::::res://sound/wind_movement.ogg
+player.tscn::PackedScene::6040612542083791674::1714569960::0::1::::<><>::uid://de6vs07lfe30k::::res://textures/player_texture.png<>res://scripts/player.gd<>res://scripts/Camera2D.gd<>uid://b1jw12natrmvo::::res://scenes/canvas_ui/healthBar.tscn<>uid://bqev6quu0buwh::::res://scenes/utils/trail_2d.tscn<>uid://bfsjym2svavnd::::res://scenes/menu_scenes/pause_menu.tscn<>uid://8rdpyfdcv1su::::res://scenes/menu_scenes/finish_level_scene.tscn<>uid://b42owupk1jg6p::::res://scenes/menu_scenes/fail_level_scene.tscn<>res://scripts/StartTime.gd<>uid://dfhjbqwqg1cxv::::res://sound/wind_movement.ogg
 ::res://scenes/utils/::1714493819
 custom cursor.tscn::PackedScene::4086065365902965902::1714493819::0::1::::<><>::uid://de6vs07lfe30k::::res://textures/player_texture.png<>res://scripts/custom cursor.gd
 trail_2d.tscn::PackedScene::3519030981588876507::1714493819::0::1::::<><>::res://scripts/Object_trail.gd
@@ -113,7 +113,7 @@ spike.png::CompressedTexture2D::7968012754431601804::1714493819::1714493839::1::
 tile_spike.png::CompressedTexture2D::3383558105447754447::1714493819::1714493839::1::::<><>::
 wall_oppening.png::CompressedTexture2D::2187842831736195984::1714493819::1714493839::1::::<><>::
 wall_tile.png::CompressedTexture2D::8748376730812795213::1714493819::1714493839::1::::<><>::
-::res://themes/::1714569889
-buttons_theme.tres::Theme::1735218349349049548::1714569889::0::1::::<><>::
-::res://tiles/::1714569889
-tilesetsquare.tres::TileSet::3114442920754259024::1714569889::0::1::::<><>::uid://dwv1qsrovy73f::::res://textures/wall_tile.png<>uid://camyj6npsn6tl::::res://textures/buttont_tile.png
+::res://themes/::1714569960
+buttons_theme.tres::Theme::1735218349349049548::1714569960::0::1::::<><>::
+::res://tiles/::1714569960
+tilesetsquare.tres::TileSet::3114442920754259024::1714569960::0::1::::<><>::uid://dwv1qsrovy73f::::res://textures/wall_tile.png<>uid://camyj6npsn6tl::::res://textures/buttont_tile.png

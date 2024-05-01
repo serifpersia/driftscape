@@ -19,14 +19,15 @@ theme_override_colors/font_pressed_color = Color(0.611765, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = SubResource("SystemFont_6t6ul")
 theme_override_font_sizes/font_size = 50
-text = "Level"
+text = "Level15"
 script = ExtResource("2_eh20m")
 
 [node name="Score" type="Label" parent="."]
 layout_mode = 0
-offset_top = 55.0
-offset_right = 115.0
-offset_bottom = 120.0
+offset_left = 15.0
+offset_top = 53.0
+offset_right = 130.0
+offset_bottom = 118.0
 theme_override_fonts/font = SubResource("SystemFont_o3d5p")
 theme_override_font_sizes/font_size = 24
 text = "Score:  SS
