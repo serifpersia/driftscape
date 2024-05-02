@@ -85,7 +85,6 @@ visible = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-3.06878, 0)
-offset = Vector2(400, 0)
 limit_left = -464
 position_smoothing_enabled = true
 script = ExtResource("2_lpb50")

@@ -1,13 +1,9 @@
 res://default_bus_layout.tres
-res://scenes/levels/level01.tscn
+res://scenes/player/player.tscn
 res://tiles/tilesetsquare.tres
 res://themes/buttons_theme.tres
+res://scripts/Camera2D.gd
+res://scenes/levels/level01.tscn
 res://scenes/levels/level02.tscn
-res://scenes/player/player.tscn
-res://scenes/menu_scenes/finish_level_scene.tscn
-res://scripts/fail_finish_scene.gd
-res://scenes/menu_scenes/level_selector_menu.tscn
-res://scripts/level_select_menu.gd
 res://scenes/obsticales/buttonActivate.tscn
-res://scripts/ButtonTest.gd
-res://scenes/canvas_ui/lvl_btn.tscn
+res://scenes/level_utils/finish_area.tscn

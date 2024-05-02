@@ -8,3 +8,7 @@ func _on_area_2d_body_entered(body):
 		print("Weight on button:", totalWeight, "kg")
 	if totalWeight >= 4:
 		print("Open the door!")
+
+func _on_area_2d_body_exited(body):
+	if body is RigidBody2D:
+		totalWeight -= body.mass
