@@ -3,7 +3,7 @@ extends Camera2D
 var baseZoom: Vector2 = Vector2(1.1575, 1.1575)
 var minZoom: Vector2 = Vector2(0.125, 0.125)
 var zoomSpeed: float = 0.1
-var sensitivity: float = 0.2375
+var sensitivity: float = 0.24
 
 var maxOffset = 750.0
 var targetOffset = 0.0
