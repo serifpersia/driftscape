@@ -74,6 +74,21 @@ text = "3"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Progress" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -159.5
+offset_top = 32.0
+offset_right = 159.5
+offset_bottom = 62.0
+grow_horizontal = 2
+theme_override_fonts/font = SubResource("SystemFont_f3nvp")
+theme_override_font_sizes/font_size = 36
+text = "0.0%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("5_2dexs")]
 visible = false
 

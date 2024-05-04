@@ -8,6 +8,7 @@ class_name Player extends CharacterBody2D
 @onready var time_counter = $CanvasLayer/TimeCounter
 @onready var damage_taken = $CanvasLayer/DamageTaken
 @onready var movement_sound = $MovementSound
+@onready var progress_label = $CanvasLayer/Progress
 
 var Speed_multiplier: float = 6
 var Max_health: float = 100
@@ -22,6 +23,7 @@ var score : String
 var canMove
 var speedRatio = 1.0
 var push_force = 50.0
+var finish_position = Vector2.ZERO
 
 signal gameEndedSignal
 
@@ -38,6 +40,7 @@ func _physics_process(delta):
 		var targetVelocity: Vector2 = targetDir * Speed_multiplier
 		velocity = velocity.lerp(targetVelocity, 0.5)
 		move_and_slide()
+		calculate_progress()
 		
 		for i in get_slide_collision_count():
 			var c = get_slide_collision(i)
@@ -69,6 +72,7 @@ func updateTimeLabel():
 	timeString = str(minutes).pad_zeros(2) + ":" + str(seconds).pad_zeros(2)
 	time_counter.text = 'Time: ' + timeString
 	time_label.text = 'Time: ' + timeString
+
 
 func _input(event):
 	if event is InputEventMouseButton:
@@ -151,3 +155,49 @@ func pauseMovement():
 
 func resumeMovement():
 	canMove = true
+
+func find_finish_area(node: Node) -> Node:
+	var level_pattern = "^(level|custom)\\d+$"
+	var regex = RegEx.new()
+	regex.compile(level_pattern)
+
+	if regex.search(node.get_name()) != null:
+		var finish_area = node.get_node("finish_area")
+		if finish_area != null:
+			return finish_area
+
+	for child in node.get_children():
+		var result = find_finish_area(child)
+		if result != null:
+			return result
+
+	return null
+
+func calculate_progress():
+	var root_node = get_tree().get_root()
+	var finish_area = find_finish_area(root_node)
+
+	if finish_position == null || finish_area == null:
+		return
+		
+	var player_position = global_position
+	finish_position = finish_area.global_position
+	
+	var max_distance = Vector2.ZERO.distance_to(finish_position)
+	var distance_to_finish = player_position.distance_to(finish_position)
+	
+	var progress_area_size = Vector2(465, 128)
+	var progress_area_rect = Rect2(finish_position - progress_area_size / 2, progress_area_size)
+	var is_inside_progress_area = progress_area_rect.has_point(player_position)
+	
+	var progress = 100.0 - (distance_to_finish / max_distance) * 100.0
+	
+	progress = clamp(progress, 0.0, 100.0)
+	var formatted_progress = "%1.2f" % progress + "%"
+	
+	progress_label.text = formatted_progress
+	
+	if is_inside_progress_area:
+		progress = 100
+		progress_label.text = "100%"
+

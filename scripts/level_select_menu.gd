@@ -71,8 +71,6 @@ func create_level_btn(lvl_path: String, lvl_name: String):
 		stage_2_grid.add_child(btn)
 	elif level_num >= 11 and level_num <= 15:
 		stage_3_grid.add_child(btn)
-	else:
-		print("Level number out of range.")
 
 	var score_label = btn.get_node("Score")
 	if score_label != null:

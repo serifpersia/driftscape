@@ -1,6 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1714829730
-default_bus_layout.tres::AudioBusLayout::2419661801450261833::1714829465::0::1::::<><>::
+::res://::1714855153
+default_bus_layout.tres::AudioBusLayout::2419661801450261833::1714848596::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1714830076::0::1::::<><>::
 ::res://scenes/::1714829436
 ::res://scenes/canvas_ui/::1714829409
 btn_click.tscn::PackedScene::4743009513213779438::1714829409::0::1::::<><>::uid://bvbhatucsu5mo::::res://sound/btn_sound.wav
@@ -11,10 +12,10 @@ volume_slider.tscn::PackedScene::8631652160394978118::1714829409::0::1::::<><>::
 ::res://scenes/custom_levels/::1714829409
 custom01.tscn::PackedScene::2769534124864593770::1714829409::0::1::::<><>::uid://bkmwojm6pgcno::::res://tiles/tilesetsquare.tres<>res://scripts/bgm_stage1.gd<>uid://csceag70sbadm::::res://scenes/player/player.tscn<>uid://byhk5t6w6gw51::::res://scenes/utils/custom cursor.tscn<>uid://b6wt0wd4jfqf::::res://scenes/level_utils/world_environment.tscn<>uid://bx6hcycvhgr7a::::res://scenes/level_utils/finish_area.tscn
 custom02.tscn::PackedScene::7470135269682340696::1714829409::0::1::::<><>::uid://bkmwojm6pgcno::::res://tiles/tilesetsquare.tres<>res://scripts/bgm_stage1.gd<>uid://csceag70sbadm::::res://scenes/player/player.tscn<>uid://byhk5t6w6gw51::::res://scenes/utils/custom cursor.tscn<>uid://b6wt0wd4jfqf::::res://scenes/level_utils/world_environment.tscn<>uid://bx6hcycvhgr7a::::res://scenes/level_utils/finish_area.tscn
-::res://scenes/levels/::1714829409
-level01.tscn::PackedScene::8040375986488715424::1714829409::0::1::::<><>::uid://bkmwojm6pgcno::::res://tiles/tilesetsquare.tres<>res://scripts/bgm_stage1.gd<>uid://csceag70sbadm::::res://scenes/player/player.tscn<>uid://byhk5t6w6gw51::::res://scenes/utils/custom cursor.tscn<>uid://b6wt0wd4jfqf::::res://scenes/level_utils/world_environment.tscn<>uid://bx6hcycvhgr7a::::res://scenes/level_utils/finish_area.tscn<>uid://ckkl2yi4ttby0::::res://scenes/obsticales/laser.tscn<>uid://cpqm5u5dktr65::::res://scenes/obsticales/moving_platform.tscn<>uid://ly5wvhm3isdx::::res://scenes/obsticales/moving laser_2_horizontal.tscn
-level02.tscn::PackedScene::1286314908041115746::1714829409::0::1::::<><>::uid://bkmwojm6pgcno::::res://tiles/tilesetsquare.tres<>res://scripts/bgm_stage1.gd<>uid://b6wt0wd4jfqf::::res://scenes/level_utils/world_environment.tscn<>uid://bx6hcycvhgr7a::::res://scenes/level_utils/finish_area.tscn<>uid://ckkl2yi4ttby0::::res://scenes/obsticales/laser.tscn<>uid://brycor71rtxfp::::res://scenes/obsticales/moving laser_1_horizontal_double.tscn<>uid://ly5wvhm3isdx::::res://scenes/obsticales/moving laser_2_horizontal.tscn<>uid://csceag70sbadm::::res://scenes/player/player.tscn<>uid://b5bks67qf3sa0::::res://scenes/obsticales/single_spike_loop_faster.tscn<>uid://byhk5t6w6gw51::::res://scenes/utils/custom cursor.tscn<>uid://cpqm5u5dktr65::::res://scenes/obsticales/moving_platform.tscn<>uid://bnj6crbyghia7::::res://scenes/obsticales/gravity_test_obj.tscn<>uid://cx8teca4vuujb::::res://scenes/obsticales/Segment01.tscn<>uid://dcmxp1yp7714e::::res://scenes/obsticales/buttonActivate.tscn
-level03.tscn::PackedScene::698951203121455689::1714829409::0::1::::<><>::res://scripts/bgm_stage1.gd<>uid://bkmwojm6pgcno::::res://tiles/tilesetsquare.tres<>uid://csceag70sbadm::::res://scenes/player/player.tscn<>uid://byhk5t6w6gw51::::res://scenes/utils/custom cursor.tscn<>uid://b6wt0wd4jfqf::::res://scenes/level_utils/world_environment.tscn
+::res://scenes/levels/::1714855178
+level01.tscn::PackedScene::8040375986488715424::1714855177::0::1::::<><>::uid://bkmwojm6pgcno::::res://tiles/tilesetsquare.tres<>res://scripts/bgm_stage1.gd<>uid://csceag70sbadm::::res://scenes/player/player.tscn<>uid://byhk5t6w6gw51::::res://scenes/utils/custom cursor.tscn<>uid://b6wt0wd4jfqf::::res://scenes/level_utils/world_environment.tscn<>uid://bx6hcycvhgr7a::::res://scenes/level_utils/finish_area.tscn<>uid://ckkl2yi4ttby0::::res://scenes/obsticales/laser.tscn<>uid://cpqm5u5dktr65::::res://scenes/obsticales/moving_platform.tscn<>uid://ly5wvhm3isdx::::res://scenes/obsticales/moving laser_2_horizontal.tscn
+level02.tscn::PackedScene::1286314908041115746::1714854117::0::1::::<><>::uid://bkmwojm6pgcno::::res://tiles/tilesetsquare.tres<>res://scripts/bgm_stage1.gd<>uid://b6wt0wd4jfqf::::res://scenes/level_utils/world_environment.tscn<>uid://bx6hcycvhgr7a::::res://scenes/level_utils/finish_area.tscn<>uid://ckkl2yi4ttby0::::res://scenes/obsticales/laser.tscn<>uid://brycor71rtxfp::::res://scenes/obsticales/moving laser_1_horizontal_double.tscn<>uid://ly5wvhm3isdx::::res://scenes/obsticales/moving laser_2_horizontal.tscn<>uid://csceag70sbadm::::res://scenes/player/player.tscn<>uid://b5bks67qf3sa0::::res://scenes/obsticales/single_spike_loop_faster.tscn<>uid://byhk5t6w6gw51::::res://scenes/utils/custom cursor.tscn<>uid://cpqm5u5dktr65::::res://scenes/obsticales/moving_platform.tscn<>uid://bnj6crbyghia7::::res://scenes/obsticales/gravity_test_obj.tscn<>uid://cx8teca4vuujb::::res://scenes/obsticales/Segment01.tscn<>uid://dcmxp1yp7714e::::res://scenes/obsticales/buttonActivate.tscn
+level03.tscn::PackedScene::698951203121455689::1714854117::0::1::::<><>::res://scripts/bgm_stage1.gd<>uid://bkmwojm6pgcno::::res://tiles/tilesetsquare.tres<>uid://csceag70sbadm::::res://scenes/player/player.tscn<>uid://byhk5t6w6gw51::::res://scenes/utils/custom cursor.tscn<>uid://b6wt0wd4jfqf::::res://scenes/level_utils/world_environment.tscn
 level04.tscn::PackedScene::4186506082725917951::1714829409::0::1::::<><>::res://scripts/bgm_stage1.gd<>uid://bkmwojm6pgcno::::res://tiles/tilesetsquare.tres<>uid://csceag70sbadm::::res://scenes/player/player.tscn<>uid://byhk5t6w6gw51::::res://scenes/utils/custom cursor.tscn<>uid://b6wt0wd4jfqf::::res://scenes/level_utils/world_environment.tscn
 level05.tscn::PackedScene::2619404321255730026::1714829409::0::1::::<><>::uid://bkmwojm6pgcno::::res://tiles/tilesetsquare.tres<>res://scripts/bgm_stage1.gd<>uid://csceag70sbadm::::res://scenes/player/player.tscn<>uid://byhk5t6w6gw51::::res://scenes/utils/custom cursor.tscn<>uid://b6wt0wd4jfqf::::res://scenes/level_utils/world_environment.tscn
 level06.tscn::PackedScene::1393670953049418139::1714829409::0::1::::<><>::res://scripts/bgm_stage2.gd<>uid://bkmwojm6pgcno::::res://tiles/tilesetsquare.tres<>uid://csceag70sbadm::::res://scenes/player/player.tscn<>uid://byhk5t6w6gw51::::res://scenes/utils/custom cursor.tscn<>uid://b6wt0wd4jfqf::::res://scenes/level_utils/world_environment.tscn
@@ -27,18 +28,19 @@ level12.tscn::PackedScene::2710220939284645082::1714829409::0::1::::<><>::res://
 level13.tscn::PackedScene::5711470988935798530::1714829409::0::1::::<><>::uid://bkmwojm6pgcno::::res://tiles/tilesetsquare.tres<>res://scripts/bgm_stage3.gd<>uid://csceag70sbadm::::res://scenes/player/player.tscn<>uid://byhk5t6w6gw51::::res://scenes/utils/custom cursor.tscn<>uid://b6wt0wd4jfqf::::res://scenes/level_utils/world_environment.tscn
 level14.tscn::PackedScene::2342858731450194911::1714829409::0::1::::<><>::uid://bkmwojm6pgcno::::res://tiles/tilesetsquare.tres<>res://scripts/bgm_stage3.gd<>uid://csceag70sbadm::::res://scenes/player/player.tscn<>uid://byhk5t6w6gw51::::res://scenes/utils/custom cursor.tscn<>uid://b6wt0wd4jfqf::::res://scenes/level_utils/world_environment.tscn
 level15.tscn::PackedScene::2417175182499256363::1714829409::0::1::::<><>::uid://bkmwojm6pgcno::::res://tiles/tilesetsquare.tres<>uid://csceag70sbadm::::res://scenes/player/player.tscn<>uid://byhk5t6w6gw51::::res://scenes/utils/custom cursor.tscn<>uid://b6wt0wd4jfqf::::res://scenes/level_utils/world_environment.tscn
+level99.tscn::PackedScene::5972342776911653570::1714855178::0::1::::<><>::uid://bkmwojm6pgcno::::res://tiles/tilesetsquare.tres<>uid://csceag70sbadm::::res://scenes/player/player.tscn<>uid://byhk5t6w6gw51::::res://scenes/utils/custom cursor.tscn<>uid://b6wt0wd4jfqf::::res://scenes/level_utils/world_environment.tscn
 ::res://scenes/level_utils/::1714829409
 audio_player.tscn::PackedScene::744121559277359853::1714829409::0::1::::<><>::res://scripts/audio_player.gd
 finish_area.tscn::PackedScene::4065189652894641092::1714829409::0::1::::<><>::res://scripts/finish_area.gd
 ingame_blurred.tscn::PackedScene::3556311145942559761::1714829409::0::1::::<><>::uid://cxpu66mae7py1::::res://scenes/player/empty_player.tscn<>uid://bkmwojm6pgcno::::res://tiles/tilesetsquare.tres<>res://shaders/main_ingame.gdshader<>uid://byhk5t6w6gw51::::res://scenes/utils/custom cursor.tscn
 regen_area.tscn::PackedScene::222502381719063388::1714829409::0::1::::<><>::res://scripts/regen_area.gd<>uid://bcg54eoj4nqho::::res://textures/hp regen_sprite.png
 world_environment.tscn::PackedScene::135555605183811505::1714829409::0::1::::<><>::
-::res://scenes/menu_scenes/::1714829467
+::res://scenes/menu_scenes/::1714854117
 fail_level_scene.tscn::PackedScene::4478525748048822189::1714829409::0::1::::<><>::res://scripts/fail_finish_scene.gd<>uid://can6od2otra6s::::res://scenes/canvas_ui/button.tscn<>uid://b8tsw525wce4u::::res://scenes/canvas_ui/btn_click.tscn
 finish_level_scene.tscn::PackedScene::2351536468185218248::1714829409::0::1::::<><>::res://scripts/fail_finish_scene.gd<>uid://can6od2otra6s::::res://scenes/canvas_ui/button.tscn<>uid://b8tsw525wce4u::::res://scenes/canvas_ui/btn_click.tscn
 level_editor.tscn::PackedScene::2865848995719501488::1714829409::0::1::::<><>::
-level_selector_menu.tscn::PackedScene::7589326284337543420::1714829153::0::1::::<><>::res://scripts/level_select_menu.gd<>uid://can6od2otra6s::::res://scenes/canvas_ui/button.tscn<>uid://b8tsw525wce4u::::res://scenes/canvas_ui/btn_click.tscn
-menu.tscn::PackedScene::107420556175714119::1714829467::0::1::::<><>::res://scripts/Menu.gd<>uid://bqwx6pj2t8ia0::::res://scenes/level_utils/ingame_blurred.tscn<>uid://can6od2otra6s::::res://scenes/canvas_ui/button.tscn<>uid://b8tsw525wce4u::::res://scenes/canvas_ui/btn_click.tscn
+level_selector_menu.tscn::PackedScene::7589326284337543420::1714854117::0::1::::<><>::res://scripts/level_select_menu.gd<>uid://can6od2otra6s::::res://scenes/canvas_ui/button.tscn<>uid://b8tsw525wce4u::::res://scenes/canvas_ui/btn_click.tscn
+menu.tscn::PackedScene::107420556175714119::1714854117::0::1::::<><>::res://scripts/Menu.gd<>uid://bqwx6pj2t8ia0::::res://scenes/level_utils/ingame_blurred.tscn<>uid://can6od2otra6s::::res://scenes/canvas_ui/button.tscn<>uid://b8tsw525wce4u::::res://scenes/canvas_ui/btn_click.tscn
 options_menu.tscn::PackedScene::4903898409518884358::1714829409::0::1::::<><>::res://scripts/options_menu.gd<>uid://can6od2otra6s::::res://scenes/canvas_ui/button.tscn<>uid://yys17mde0tii::::res://themes/buttons_theme.tres<>res://scripts/fullscreenToggle.gd<>uid://du8ibx1qes1h7::::res://scenes/canvas_ui/volume_slider.tscn<>uid://b8tsw525wce4u::::res://scenes/canvas_ui/btn_click.tscn<>res://scripts/resolutionSelected.gd
 pause_menu.tscn::PackedScene::2775113686280800993::1714829409::0::1::::<><>::res://scripts/PauseMenu.gd<>uid://can6od2otra6s::::res://scenes/canvas_ui/button.tscn<>uid://b8tsw525wce4u::::res://scenes/canvas_ui/btn_click.tscn
 ::res://scenes/obsticales/::1714829409
@@ -56,13 +58,13 @@ single_spike_loop.tscn::PackedScene::7086418383411992407::1714829409::0::1::::<>
 single_spike_loop_faster.tscn::PackedScene::4494791363198450705::1714829409::0::1::::<><>::uid://dt7pd6b2iqgl4::::res://scenes/obsticales/spike.tscn
 spike.tscn::PackedScene::8559827911611785163::1714829409::0::1::::<><>::uid://dlr1ag332ctd1::::res://textures/spike.png<>res://scripts/damagePlayer.gd
 testColObj.tscn::PackedScene::5833144644615590451::1714829409::0::1::::<><>::res://scripts/damagePlayer.gd<>uid://6f2pmjgnfcaq::::res://textures/wall_oppening.png
-::res://scenes/player/::1714829409
+::res://scenes/player/::1714855177
 empty_player.tscn::PackedScene::6419421783606353350::1714829409::0::1::::<><>::res://scripts/empty_player.gd<>uid://de6vs07lfe30k::::res://textures/player_texture.png<>uid://bqev6quu0buwh::::res://scenes/utils/trail_2d.tscn
-player.tscn::PackedScene::6040612542083791674::1714829409::0::1::::<><>::uid://de6vs07lfe30k::::res://textures/player_texture.png<>res://scripts/player.gd<>res://scripts/Camera2D.gd<>uid://b1jw12natrmvo::::res://scenes/canvas_ui/healthBar.tscn<>uid://bqev6quu0buwh::::res://scenes/utils/trail_2d.tscn<>uid://bfsjym2svavnd::::res://scenes/menu_scenes/pause_menu.tscn<>uid://8rdpyfdcv1su::::res://scenes/menu_scenes/finish_level_scene.tscn<>uid://b42owupk1jg6p::::res://scenes/menu_scenes/fail_level_scene.tscn<>res://scripts/StartTime.gd<>uid://dfhjbqwqg1cxv::::res://sound/wind_movement.ogg
+player.tscn::PackedScene::6040612542083791674::1714855177::0::1::::<><>::uid://de6vs07lfe30k::::res://textures/player_texture.png<>res://scripts/player.gd<>res://scripts/Camera2D.gd<>uid://b1jw12natrmvo::::res://scenes/canvas_ui/healthBar.tscn<>uid://bqev6quu0buwh::::res://scenes/utils/trail_2d.tscn<>uid://bfsjym2svavnd::::res://scenes/menu_scenes/pause_menu.tscn<>uid://8rdpyfdcv1su::::res://scenes/menu_scenes/finish_level_scene.tscn<>uid://b42owupk1jg6p::::res://scenes/menu_scenes/fail_level_scene.tscn<>res://scripts/StartTime.gd<>uid://dfhjbqwqg1cxv::::res://sound/wind_movement.ogg
 ::res://scenes/utils/::1714829409
 custom cursor.tscn::PackedScene::4086065365902965902::1714829409::0::1::::<><>::uid://de6vs07lfe30k::::res://textures/player_texture.png<>res://scripts/custom cursor.gd
 trail_2d.tscn::PackedScene::3519030981588876507::1714829409::0::1::::<><>::res://scripts/Object_trail.gd
-::res://scripts/::1714829426
+::res://scripts/::1714855176
 audio_player.gd::GDScript::-1::1714829409::0::1::::<>AudioStreamPlayer<>::
 bgm_stage1.gd::GDScript::-1::1714829409::0::1::::<>Node2D<>::
 bgm_stage2.gd::GDScript::-1::1714829409::0::1::::<>Node2D<>::
@@ -73,18 +75,18 @@ custom cursor.gd::GDScript::-1::1714829409::0::1::::<>Node2D<>::
 damagePlayer.gd::GDScript::-1::1714829409::0::1::::<>AnimatableBody2D<>::
 empty_player.gd::GDScript::-1::1714829409::0::1::::<>CharacterBody2D<>::
 fail_finish_scene.gd::GDScript::-1::1714829409::0::1::::<>Control<>::
-finish_area.gd::GDScript::-1::1714829409::0::1::::<>Node2D<>::
+finish_area.gd::GDScript::-1::1714853854::0::1::::<>Node2D<>::
 fullscreenToggle.gd::GDScript::-1::1714829409::0::1::::<>OptionButton<>::
 global.gd::GDScript::-1::1714829409::0::1::::<>Node<>::
 HealthBar.gd::GDScript::-1::1714829409::0::1::::<>ProgressBar<>::
 laser.gd::GDScript::-1::1714829409::0::1::::<>RayCast2D<>::
-level_select_menu.gd::GDScript::-1::1714829115::0::1::::<>Control<>::
+level_select_menu.gd::GDScript::-1::1714855176::0::1::::<>Control<>::
 lvl_btn.gd::GDScript::-1::1714829409::0::1::::<>Button<>::
 Menu.gd::GDScript::-1::1714829409::0::1::::<>Control<>::
 Object_trail.gd::GDScript::-1::1714829409::0::1::::<>Trails<>::
 options_menu.gd::GDScript::-1::1714829409::0::1::::<>Control<>::
 PauseMenu.gd::GDScript::-1::1714829409::0::1::::<>Control<>::
-player.gd::GDScript::-1::1714829409::0::1::::Player<>CharacterBody2D<>::
+player.gd::GDScript::-1::1714855014::0::1::::Player<>CharacterBody2D<>::
 regen_area.gd::GDScript::-1::1714829409::0::1::::<>Node2D<>::
 resolutionSelected.gd::GDScript::-1::1714829409::0::1::::<>OptionButton<>::
 savedata.gd::GDScript::-1::1714829409::0::1::::SaveData<>Resource<>::
@@ -117,7 +119,7 @@ spike.png::CompressedTexture2D::7968012754431601804::1714829409::1714829464::1::
 tile_spike.png::CompressedTexture2D::3383558105447754447::1714829409::1714829464::1::::<><>::
 wall_oppening.png::CompressedTexture2D::2187842831736195984::1714829409::1714829464::1::::<><>::
 wall_tile.png::CompressedTexture2D::8748376730812795213::1714829409::1714829464::1::::<><>::
-::res://themes/::1714829467
-buttons_theme.tres::Theme::1735218349349049548::1714829467::0::1::::<><>::
-::res://tiles/::1714829467
-tilesetsquare.tres::TileSet::3114442920754259024::1714829467::0::1::::<><>::uid://dwv1qsrovy73f::::res://textures/wall_tile.png<>uid://camyj6npsn6tl::::res://textures/buttont_tile.png
+::res://themes/::1714848598
+buttons_theme.tres::Theme::1735218349349049548::1714848598::0::1::::<><>::
+::res://tiles/::1714848598
+tilesetsquare.tres::TileSet::3114442920754259024::1714848598::0::1::::<><>::uid://dwv1qsrovy73f::::res://textures/wall_tile.png<>uid://camyj6npsn6tl::::res://textures/buttont_tile.png
