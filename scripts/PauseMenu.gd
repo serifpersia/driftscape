@@ -27,7 +27,7 @@ func pause():
 func togglePause():
 	if Input.is_action_just_pressed("pause"):
 		if gameEnded:
-			return  # Don't toggle pause if the game has ended (finished or failed)
+			return
 		
 		if get_tree().paused:
 			resume()

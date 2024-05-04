@@ -1,4 +1,4 @@
-extends AudioStreamPlayer
+extends AudioStreamPlayer 
 
 const BGM_JAZZY_MAIN_MENU = preload("res://sound/bgm_jazzy_main_menu.mp3")
 const BGM_STAGE_1 = preload("res://sound/bgm_piano_pretty.mp3")

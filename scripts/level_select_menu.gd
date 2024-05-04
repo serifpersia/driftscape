@@ -3,9 +3,13 @@ extends Control
 const LEVEL_BTN = preload("res://scenes/canvas_ui/lvl_btn.tscn")
 
 @export_dir var dir_path 
-@onready var grid = $MarginContainer/HBoxContainer/VBoxContainer/GridContainer
 @onready var timer = $Timer
 @onready var btn_click = $btn_click
+@onready var stage_1_grid = $HBoxContainer/StarterLevels/ScrollContainer/GridContainer/Stage1Levels
+@onready var stage_2_grid = $HBoxContainer/StarterLevels/ScrollContainer/GridContainer/Stage2Levels
+@onready var stage_3_grid = $HBoxContainer/StarterLevels/ScrollContainer/GridContainer/Stage3Levels
+@onready var custom_stage_levels = $HBoxContainer/CustomLevels/ScrollContainer/GridContainer/Custom_Stage_Levels
+
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
@@ -18,19 +22,58 @@ func get_levels(path):
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
 		while file_name != '':
-			create_level_btn('%s/%s' %[dir.get_current_dir(), file_name], file_name)
+			if file_name.begins_with("custom"):
+				create_custom_level_btn('%s/%s' % [dir.get_current_dir(), file_name], file_name)
+			else:
+				create_level_btn('%s/%s' % [dir.get_current_dir(), file_name], file_name)
 			file_name = dir.get_next()
 		dir.list_dir_end()
 	else:
-		print('An error has occured when trying access the levels path')
+		print('An error has occurred when trying to access the levels path')
+
+	var custom_dir = DirAccess.open("res://scenes/custom_levels")
+	if custom_dir:
+		custom_dir.list_dir_begin()
+		var custom_file_name = custom_dir.get_next()
+		while custom_file_name != '':
+			create_custom_level_btn('%s/%s' % [custom_dir.get_current_dir(), custom_file_name], custom_file_name)
+			custom_file_name = custom_dir.get_next()
+		custom_dir.list_dir_end()
+	else:
+		print('An error has occurred when trying to access the custom levels path')
+
+func create_custom_level_btn(lvl_path: String, lvl_name: String):
+	var btn = LEVEL_BTN.instantiate()
+	var modified_btn_text = lvl_name.trim_suffix('.tscn')
+	btn.text = modified_btn_text
+	btn.level_path = lvl_path
+	custom_stage_levels.add_child(btn)
+	
+	var score_label = btn.get_node("Score")
+	if score_label != null:
+		var score = Global.save_scores.get_level_score(modified_btn_text)
+		var time = Global.save_scores.get_level_time(modified_btn_text)
+		score_label.text = 'Score: ' + score + '\n' + 'Time: ' + time
+	else:
+		print("Score label not found in button scene.")
+
 
 func create_level_btn(lvl_path: String, lvl_name: String):
 	var btn = LEVEL_BTN.instantiate()
 	var modified_btn_text = lvl_name.trim_suffix('.tscn')
 	btn.text = modified_btn_text
 	btn.level_path = lvl_path
-	grid.add_child(btn)
-	
+
+	var level_num = int(modified_btn_text.replace("level", ""))
+	if level_num >= 1 and level_num <= 5:
+		stage_1_grid.add_child(btn)
+	elif level_num >= 6 and level_num <= 10:
+		stage_2_grid.add_child(btn)
+	elif level_num >= 11 and level_num <= 15:
+		stage_3_grid.add_child(btn)
+	else:
+		print("Level number out of range.")
+
 	var score_label = btn.get_node("Score")
 	if score_label != null:
 		var score = Global.save_scores.get_level_score(modified_btn_text)
@@ -38,6 +81,7 @@ func create_level_btn(lvl_path: String, lvl_name: String):
 		score_label.text = 'Score: ' + score + '\n' + 'Time: ' + time
 	else:
 		print("Score label not found in button scene.")
+
 
 func play_click():
 	timer.start()

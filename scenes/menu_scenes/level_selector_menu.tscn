@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dplbuib6q5a3j"]
+[gd_scene load_steps=5 format=3 uid="uid://dgeldh6mkroki"]
 
 [ext_resource type="Script" path="res://scripts/level_select_menu.gd" id="1_yrggx"]
 [ext_resource type="PackedScene" uid="uid://can6od2otra6s" path="res://scenes/canvas_ui/button.tscn" id="2_wdxbo"]
@@ -18,62 +18,18 @@ grow_vertical = 2
 script = ExtResource("1_yrggx")
 dir_path = "res://scenes/levels"
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="Title" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = 32.0
 grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 12
-theme_override_constants/margin_top = 12
-theme_override_constants/margin_right = 12
-theme_override_constants/margin_bottom = 12
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 60
-
-[node name="Separator" type="Control" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_ujoka")
 theme_override_font_sizes/font_size = 64
 text = "Level Select"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 24
-alignment = 1
-
-[node name="GridContainer" type="GridContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/h_separation = 75
-theme_override_constants/v_separation = 75
-columns = 5
-
-[node name="MainMenu" parent="." instance=ExtResource("2_wdxbo")]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -72.0
-offset_top = 250.0
-offset_right = 72.0
-offset_bottom = 290.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Main Menu"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1
@@ -81,5 +37,129 @@ one_shot = true
 
 [node name="btn_click" parent="." instance=ExtResource("3_faqob")]
 
-[connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -608.0
+offset_top = -249.0
+offset_right = 608.0
+offset_bottom = 288.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StarterLevels" type="HBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/StarterLevels"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer/StarterLevels/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Title" type="Label" parent="HBoxContainer/StarterLevels/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme_override_fonts/font = SubResource("SystemFont_ujoka")
+theme_override_font_sizes/font_size = 42
+text = "Starter Levels"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stage1" type="Label" parent="HBoxContainer/StarterLevels/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.45098, 0.45098, 0.45098, 1)
+theme_override_fonts/font = SubResource("SystemFont_ujoka")
+theme_override_font_sizes/font_size = 42
+text = "Stage 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stage1Levels" type="GridContainer" parent="HBoxContainer/StarterLevels/ScrollContainer/GridContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 14
+theme_override_constants/v_separation = 12
+
+[node name="Stage2" type="Label" parent="HBoxContainer/StarterLevels/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.45098, 0.45098, 0.45098, 1)
+theme_override_fonts/font = SubResource("SystemFont_ujoka")
+theme_override_font_sizes/font_size = 42
+text = "Stage 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stage2Levels" type="GridContainer" parent="HBoxContainer/StarterLevels/ScrollContainer/GridContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 14
+
+[node name="Stage3" type="Label" parent="HBoxContainer/StarterLevels/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.45098, 0.45098, 0.45098, 1)
+theme_override_fonts/font = SubResource("SystemFont_ujoka")
+theme_override_font_sizes/font_size = 42
+text = "Stage 3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stage3Levels" type="GridContainer" parent="HBoxContainer/StarterLevels/ScrollContainer/GridContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 14
+
+[node name="CustomLevels" type="HBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/CustomLevels"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer/CustomLevels/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Title" type="Label" parent="HBoxContainer/CustomLevels/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_fonts/font = SubResource("SystemFont_ujoka")
+theme_override_font_sizes/font_size = 42
+text = "Custom Levels"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Custom_Stage_Levels" type="GridContainer" parent="HBoxContainer/CustomLevels/ScrollContainer/GridContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 14
+
+[node name="MainMenu" parent="." instance=ExtResource("2_wdxbo")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -68.0
+offset_right = 76.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Main Menu"
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]

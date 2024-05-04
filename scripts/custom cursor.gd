@@ -2,7 +2,6 @@ extends Node2D
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-	# Center of the viewport
 	var pos = get_viewport_rect().size / 2.0
 	Input.warp_mouse(pos)
 
