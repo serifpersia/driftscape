@@ -29,6 +29,7 @@ window/stretch/mode="canvas_items"
 
 [editor]
 
+export/convert_text_resources_to_binary=false
 export/custom_image=""
 
 [input]

@@ -2,7 +2,8 @@ extends Control
 
 const LEVEL_BTN = preload("res://scenes/canvas_ui/lvl_btn.tscn")
 
-@export_dir var dir_path 
+@export_dir var starter_levels_dir_path
+@export_dir var custom_levels_dir_path 
 @onready var timer = $Timer
 @onready var btn_click = $btn_click
 @onready var stage_1_grid = $HBoxContainer/StarterLevels/ScrollContainer/GridContainer/Stage1Levels
@@ -13,11 +14,12 @@ const LEVEL_BTN = preload("res://scenes/canvas_ui/lvl_btn.tscn")
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	get_levels(dir_path)
+	get_levels(starter_levels_dir_path, custom_levels_dir_path)
 	AudioPlayer.play_bgm_menu()
 
-func get_levels(path):
-	var dir = DirAccess.open(path)
+func get_levels(starter_path, custom_path):
+	var dir = DirAccess.open(starter_path)
+	var custom_dir = DirAccess.open(custom_path)
 	if dir:
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
@@ -31,7 +33,6 @@ func get_levels(path):
 	else:
 		print('An error has occurred when trying to access the levels path')
 
-	var custom_dir = DirAccess.open("res://scenes/custom_levels")
 	if custom_dir:
 		custom_dir.list_dir_begin()
 		var custom_file_name = custom_dir.get_next()
