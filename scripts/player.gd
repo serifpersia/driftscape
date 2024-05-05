@@ -186,7 +186,7 @@ func calculate_progress():
 	var max_distance = Vector2.ZERO.distance_to(finish_position)
 	var distance_to_finish = player_position.distance_to(finish_position)
 	
-	var progress_area_size = Vector2(465, 128)
+	var progress_area_size = Vector2(465, 465)
 	var progress_area_rect = Rect2(finish_position - progress_area_size / 2, progress_area_size)
 	var is_inside_progress_area = progress_area_rect.has_point(player_position)
 	
