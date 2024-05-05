@@ -18,7 +18,7 @@ func _on_options_pressed():
 
 func _on_level_editor_pressed():
 	play_click()
-	last_pressed_button = "level_editor"
+	#last_pressed_button = "level_editor"
 
 func _on_quit_pressed():
 	play_click()

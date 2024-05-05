@@ -1,11 +1,4 @@
 res://default_bus_layout.tres
-res://scenes/levels/level02.tscn
+res://scenes/menu_scenes/menu.tscn
 res://tiles/tilesetsquare.tres
 res://themes/buttons_theme.tres
-res://scripts/player.gd
-res://scenes/levels/level03.tscn
-res://scenes/obsticales/laser.tscn
-res://scripts/laser.gd
-res://scenes/obsticales/moving laser_1_horizontal_double.tscn
-res://scripts/bgm_stage1.gd
-res://scenes/levels/level01.tscn
