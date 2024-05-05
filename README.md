@@ -9,3 +9,5 @@ Check 32 bit binaries export demo for Windows and Linux systems. Three levels sh
 ![image](https://github.com/serifpersia/driftscape/assets/62844718/c25a970a-ba76-461c-b0a8-fe3e2e832650)
 
 </div>
+
+This project is licensed under the MIT [LICENCE].
