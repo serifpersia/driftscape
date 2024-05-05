@@ -10,4 +10,5 @@ Check 32 bit binaries export demo for Windows and Linux systems. Three levels sh
 
 </div>
 
-This project is licensed under the MIT [LICENCE].
+## LICENCE
+This project is licensed under the [MIT License](LICENSE).
